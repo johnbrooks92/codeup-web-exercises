@@ -6,7 +6,7 @@ console.log("Hello Matt")
 console.log("Hello Evan")
 console.log("Hello Caleb")
 
-fucntion sayHello(name){
+function sayHello(name){
     console.log("Hello " + name);
     // we will talk about returning later!
 }
