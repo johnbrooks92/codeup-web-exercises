@@ -13,11 +13,6 @@ function sayHello(name){
     return "Hello, " + name + "!";
 }
 
-
-
-
-
-
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -41,8 +36,6 @@ console.log(helloMessage);
  */
 
 var myName = "John"
-sayHello(myName)
-
 console.log(sayHello(myName));
 
 
@@ -103,9 +96,9 @@ console.log(calculateTip(0.15,33.42));
  * then display the dollar amount they should tip
  */
 var totalBill = parseFloat(prompt("What is your total bill?"));
-var tipPercentage = parseFloat(prompt("What is your tip percentage?"));
-var tipAmount = calculateTip(totalBill, tipPercentage);
-alert("your tip is $" + tipAmount.toFixed(2));
+var tipPercentage = parseFloat(prompt("What is your tip percentage? Select a number 1-100"));
+var tipAmount = calculateTip(totalBill, tipPercentage/100);
+alert("Your tip is $" + tipAmount.toFixed(2));
 
 
 /**
@@ -123,13 +116,13 @@ alert("your tip is $" + tipAmount.toFixed(2));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 var price = parseFloat(prompt("What is the price?"));
-var discount = parseFloat(prompt("What is the discount?"));
+var discount = parseFloat(prompt("What is the discount percentage? Select a number from 1-100"));
 function applyDiscount(x,y) {
-    while (discount >= 1) {
-        alert("Please enter a number between 0 and 1.")
+    while (discount >= 101 || discount < 1) {
+        alert("Please enter a number between 1 and 100.")
         discount = parseFloat(prompt("What is the discount?"));
     }
-    return discount * price
+    return discount/100 * price
 }
 
 var finalPrice = applyDiscount(price, discount);
