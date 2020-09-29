@@ -160,88 +160,88 @@ console.log("hello from conditionals lec.js!");
 //
 // //TODO: Refactor todo#1 as a function named checkIfGameIsOver, that accepts numberOfLives and returns "Sorry, game over" if numberOfLives is 0, else return "Next Level!.
 //
-// function checkIfGameIsOver(numberOfLives) {
-//     if(numberOfLives ===0) {
-//         return "Sorry game over!";
-//     } else {
-//         return "Next level!"
-//     }
-// }
-//
-//
-//
-// //TODO: EXTRA BONUS - Refactor todo#2 from above as a function.
-//
-//
-//
-// // SHOULD WE DELETE STUFF EXAMPLE
-// var weShouldDeleteStuff = confirm("Are you sure you want to delete everything?")
-//
-// // ok selection ==> true, cancel selection ==> false
-//
-// if(weShouldDeleteStuff){
-//     // delete everything
-//     // double check
-//     alert("We are deleting everything...");
-// } else {
-//     alert("Operation cancelled.")
-// }
-//
-//
-//
-// //TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed", if they are not, alert "Sorry, you are not able to proceed"
-//
-// // ================ IF / ELSE IF / ELSE STATEMENT SYNTAX ===============
-// // if(condition1){
-// //     // code here runs if condition evaluates to true
-// // }else if (condition2){
-// //     // code here runs if condition1 is false *and* condition2 evaluates to true
-// // }else {
-// //     // code here gets executed if condition1 nor condition2 evaluate to true
+// // function checkIfGameIsOver(numberOfLives) {
+// //     if(numberOfLives ===0) {
+// //         return "Sorry game over!";
+// //     } else {
+// //         return "Next level!"
+// //     }
 // // }
+// //
+// //
+// //
+// // //TODO: EXTRA BONUS - Refactor todo#2 from above as a function.
+// //
+// //
+// //
+// // // SHOULD WE DELETE STUFF EXAMPLE
+// // var weShouldDeleteStuff = confirm("Are you sure you want to delete everything?")
+// //
+// // // ok selection ==> true, cancel selection ==> false
+// //
+// // if(weShouldDeleteStuff){
+// //     // delete everything
+// //     // double check
+// //     alert("We are deleting everything...");
+// // } else {
+// //     alert("Operation cancelled.")
+// // }
+// //
+// //
+// // //
+// // // //TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed", if they are not, alert "Sorry, you are not able to proceed"
+// // //
+// // // // ================ IF / ELSE IF / ELSE STATEMENT SYNTAX ===============
+// // // // if(condition1){
+// // // //     // code here runs if condition evaluates to true
+// // // // }else if (condition2){
+// // // //     // code here runs if condition1 is false *and* condition2 evaluates to true
+// // // // }else {
+// // // //     // code here gets executed if condition1 nor condition2 evaluate to true
+// // // // }
+// // //
+// // // var areYouOfAge = confirm("Are you at least 13 years of age or older?")
+// // //
+// // // if(areYouOfAge){
+// // //     alert("You may proceed!");
+// // // } else {
+// // //     alert("Sorry, you are not able to proceed.")
+// // // }
+// //
+// //
+// // // =============== IF / ELSE IF/ELSE STATEMENT EXAMPLES ================
+// // //TODO Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
+// //
+// // var weather = "earthquake"
+// //
+// // if(weather === "snowing"){
+// //     alert("It's snowing!")
+// // } else if (weather === "raining"){
+// //     alert("It's raining!")
+// // } else {
+// //     alert("Have a nice day!")
+// // }
+// //
+// //
+// //
+// // //TODO Together: refactor the above statement as a function
+// //
+// // function checkWeather(weather){
+// //     if (weather === "snowing"){
+// //         return("It's snowing!")
+// //     } else if (weather === "raining"){
+// //         return("It's raining!")
+// //     } else {
+// //         return("Have a nice day!")
+// //     }
+// // }
+// //
+// // console.log(checkWeather("raining"));
+// // console.log(checkWeather("tornado"));
+// // console.log(checkWeather("enflamed"));
 //
-// var areYouOfAge = confirm("Are you at least 13 years of age or older?")
+// // Together: PIZZA PREFERENCE EXAMPLE
 //
-// if(areYouOfAge){
-//     alert("You may proceed!");
-// } else {
-//     alert("Sorry, you are not able to proceed.")
-// }
-
-
-// =============== IF / ELSE IF/ELSE STATEMENT EXAMPLES ================
-//TODO Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
-
-var weather = "earthquake"
-
-if(weather === "snowing"){
-    alert("It's snowing!")
-} else if (weather === "raining"){
-    alert("It's raining!")
-} else {
-    alert("Have a nice day!")
-}
-
-
-
-//TODO Together: refactor the above statement as a function
-
-function checkWeather(weather){
-    if (weather === "snowing"){
-        return("It's snowing!")
-    } else if (weather === "raining"){
-        return("It's raining!")
-    } else {
-        return("Have a nice day!")
-    }
-}
-
-console.log(checkWeather("raining"));
-console.log(checkWeather("tornado"));
-console.log(checkWeather("enflamed"));
-
-// Together: PIZZA PREFERENCE EXAMPLE
-
 // var pizzaPreference = prompt("What kind of pizza do you like?");
 // console.log("User pizza input: " + pizzaPreference);
 //
@@ -254,14 +254,30 @@ console.log(checkWeather("enflamed"));
 // } else {
 //     alert(pizzaPreference + " isn't my favorite, but let's order some!");
 // }
-
-
+//
+//
 
 
 //TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
 
+var lightColor = "Green"
 
+function checkLightColor(lightColor){
+    if (lightColor === "Green"){
+        return("Keep it moving, partner!")
+    } else if (lightColor === "Yellow"){
+        return("Whoa there, boss!")
+    } else if (lightColor === "Red"){
+        return("Hit the brakes, fool!")
+    } else {
+        return("Get yourself checked out, this is not a street light color.")
+    }
+}
 
+console.log(checkLightColor(lightColor));
+console.log(checkLightColor("Yellow"));
+console.log(checkLightColor("Red"));
+console.log(checkLightColor("Brown"));
 
 
 
