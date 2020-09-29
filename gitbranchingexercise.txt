@@ -1,0 +1,24 @@
+To begin, create a new branch using git checkout - b branch-name-here
+*No need to put quotations around branch name*
+
+Make changes to existing file or create new file.
+*This way you have changes to upload to the new branch that are different from the master.*
+
+Use git add and git commit -m"" as usual.
+When you are on final step instead of git push origin master switch "master" for "branch-name-here"
+*This practice allows you to upload the code for review without affecting a live site or the master project*
+
+At this point, go to GitHub.
+You can do so through your browser, or there should be a link after you push to the new branch in the subsequent terminal code.
+The link will take you to your branches page on GitHub.
+Once there, make sure you see the status "Able to Merge" at top of page.
+Then, you will be able to select "Create Pull Request".
+On the ensuing page, there is a message that says "This branch has no conflicts with the base branch".
+If you see this message, go ahead and click "Merge Pull Request"
+Next, select "Confirm Merge" to finalize.
+
+Return to IntelliJ (or terminal you are using) and use git checkout master
+Follow that with git pull origin master and the files should now be synced locally.
+
+
+

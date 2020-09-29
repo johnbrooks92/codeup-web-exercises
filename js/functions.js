@@ -13,11 +13,6 @@ function sayHello(name){
     return "Hello, " + name + "!";
 }
 
-
-
-
-
-
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
