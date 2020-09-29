@@ -2,101 +2,101 @@
 
 console.log("hello from conditionals lec.js!");
 
-// ================ REAL WORLD SCENARIO ================
-// If a user is an admin,show a specific navbar
-// If weather is rainy, show rain icon
-// If number of lives is 0, game is over
-
-
-// ================ IF STATEMENT SYNTAX ================
-
-// if(condition){
-// code here runs if condition evaluates to true
-// }
-
-
-// ================ IF STATEMENT EXAMPLES ================
-//TODO Together: Show a specific navbar if user is admin
-// if(isAdmin){
-//     //show an admin navbar
-// }
-
-
-
-
-
-
-
-//TODO Together: Send a 20% off coupon if its users birthday
+// // ================ REAL WORLD SCENARIO ================
+// // If a user is an admin,show a specific navbar
+// // If weather is rainy, show rain icon
+// // If number of lives is 0, game is over
 //
-// if(isBirthday){
-//     //send a coupon
+//
+// // ================ IF STATEMENT SYNTAX ================
+//
+// // if(condition){
+// // code here runs if condition evaluates to true
+// // }
+//
+//
+// // ================ IF STATEMENT EXAMPLES ================
+// //TODO Together: Show a specific navbar if user is admin
+// // if(isAdmin){
+// //     //show an admin navbar
+// // }
+//
+//
+//
+//
+//
+//
+//
+// //TODO Together: Send a 20% off coupon if its users birthday
+// //
+// // if(isBirthday){
+// //     //send a coupon
+// // }
+//
+//
+// //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
+//
+//
+// var isRainy = true;
+// if(isRainy){
+//     alert("It is rainy.");
 // }
-
-
-//TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
-
-
-var isRainy = true;
-if(isRainy){
-    alert("It is rainy.");
-}
-
-//TODO Together: Write an if statement that alerts the user whether or not they have enough money to buy a new item. Assume there are no hidden fees or taxes.
-
-var itemCost = 100;
-var currentBalance = 50;
-
-if(itemCost>currentBalance) {
-    alert("Sorry, you don't have sufficient funds.");
-} else {
-    alert("You can make this purchase with current funds.");
-}
-
-
-
-
-// Essentially saying 100>50 ==> True
-//TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0
-
-var numberOfLives = 5
-if(numberOfLives === 0) {
-    alert("Sorry, game over!")
-} else {
-    alert("Game on, fam!");
-}
-
-
-
-//TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing"
-
-var weather = "snowing";
-if(weather=== "snowing"){
-    alert("It's Snowing!");
-}
-
-
-
-//TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
-var numberInput = 5
-if(numberInput > 10);{
-    alert("True. Number is greater than 10.")
-}
-
-
-//TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
-
-
-
-
-// =============== IF / ELSE SYNTAX ================
-
-// if(condition){
-//     // code here runs if condition evaluates to true
+//
+// //TODO Together: Write an if statement that alerts the user whether or not they have enough money to buy a new item. Assume there are no hidden fees or taxes.
+//
+// var itemCost = 100;
+// var currentBalance = 50;
+//
+// if(itemCost>currentBalance) {
+//     alert("Sorry, you don't have sufficient funds.");
 // } else {
-//     // code here runs if condition evaluates to false
+//     alert("You can make this purchase with current funds.");
 // }
-
+//
+//
+//
+//
+// // Essentially saying 100>50 ==> True
+// //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0
+//
+// var numberOfLives = 5
+// if(numberOfLives === 0) {
+//     alert("Sorry, game over!")
+// } else {
+//     alert("Game on, fam!");
+// }
+//
+//
+//
+// //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing"
+//
+// var weather = "snowing";
+// if(weather=== "snowing"){
+//     alert("It's Snowing!");
+// }
+//
+//
+//
+// //TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
+// var numberInput = 5
+// if(numberInput > 10);{
+//     alert("True. Number is greater than 10.")
+// }
+//
+//
+// //TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
+//
+//
+//
+//
+// // =============== IF / ELSE SYNTAX ================
+//
+// // if(condition){
+// //     // code here runs if condition evaluates to true
+// // } else {
+// //     // code here runs if condition evaluates to false
+// // }
+//
 
 
 // =============== IF / ELSE STATEMENT EXAMPLES ================
@@ -114,13 +114,59 @@ var isAdmin = false;
 
 //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true, else return "have a nice day!"
 
+var isRainy = true;
+
+if(isRainy){
+    alert("It's raining!")
+} else {
+    alert("Have a nice day!")
+}
 
 
 
 //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0, else alert "Next Level!"
+
+var numberOfLives = 5;
+
+if(numberOfLives === 0){
+    alert("Sorry, game over!")
+} else {
+    alert("Next Level!")
+}
+
+
 //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing", else alert "Check back later for more details!"
+
+var weather = "snowing";
+
+if(weather === "snowing"){
+    alert("It's snowing!")
+} else {
+    alert("Check back later for more details!")
+}
+
+
+
+
 //TODO: Write an if statement that alerts true if numberInput is greater than 10, else alert "the number is less than 10"
+
+var numberInput = 75
+
+if (numberInput > 10) {
+    alert("The number is greater than 10.")
+} else {
+    alert ("The number is less than 10.")
+}
+
 //TODO: Refactor todo#1 as a function named checkIfGameIsOver, that accepts numberOfLives and returns "Sorry, game over" if numberOfLives is 0, else return "Next Level!.
+
+function checkIfGameIsOver(numberOfLives) {
+    if(numberOfLives ===0) {
+        return "Sorry game over!";
+    } else {
+        return "Next level!"
+    }
+}
 
 
 
@@ -129,7 +175,17 @@ var isAdmin = false;
 
 
 // SHOULD WE DELETE STUFF EXAMPLE
+var weShouldDeleteStuff = confirm("Are you sure you want to delete everything?")
 
+// ok selection ==> true, cancel selection ==> false
+
+if(weShouldDeleteStuff){
+    // delete everything
+    // double check
+    alert("We are deleting everything...");
+} else {
+    alert("Operation cancelled.")
+}
 
 
 
