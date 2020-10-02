@@ -187,7 +187,6 @@ if(userConfirm){
         var posNegMessage = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
         alert( posNegMessage);
     } else {
-        // sad path ==> not a number
         alert("Hey, that's not a number!");
     }
 }
