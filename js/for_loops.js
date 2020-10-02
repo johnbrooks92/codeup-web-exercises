@@ -17,27 +17,39 @@ for (var showMultiplicationTable = 0; showMultiplicationTable<100; showMultiplic
 // Use a for loop and the code from the previous lessons to generate 10 random numbers
 // between 20 and 200 and output to the console whether each number is odd or even.
 
-for (var i = 20; i <=200; i+=20){
-    if (i % 2 === 0){
-        console.log(i + " is Even.");
-    }
+
+for (var randomNumber = Math.floor((Math.random() * (200 - 20 + 1) + 20)); randomNumber <=200; randomNumber++){
+    if (randomNumber % 2 === 0)
+        console.log(randomNumber + " is Even.");
+    else if (randomNumber % 2 !== 0)
+        console.log(randomNumber + " is Odd.")
 }
 
-
-// Create a for loop that uses console.log to create the output shown below.
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+console.log(randomNumber);
+//
+// // Create a for loop that uses console.log to create the output shown below.
+// //
+// //
+// // 1
+// // 22
+// // 333
+// // 4444
+// // 55555
+// // 666666
+// // 7777777
+// // 88888888
+// // 999999999
 //
 //
-// 1
-// 22
-// 333
-// 4444
-// 55555
-// 666666
-// 7777777
-// 88888888
-// 999999999
-
-
 for(var i = 1; i <= 1; i++); {
     if (i === 1)
         console.log();
@@ -51,32 +63,32 @@ for(var i = 1; i <= 1; i++); {
         console.log(88888888);
         console.log(999999999);
 }
-
-
-// Create a for loop that uses console.log to create the output shown below.
 //
 //
-// 100
-// 95
-// 90
-// 85
-// 80
-// 75
-// 70
-// 65
-// 60
-// 55
-// 50
-// 45
-// 40
-// 35
-// 30
-// 25
-// 20
-// 15
-// 10
-// 5
-
+// // Create a for loop that uses console.log to create the output shown below.
+// //
+// //
+// // 100
+// // 95
+// // 90
+// // 85
+// // 80
+// // 75
+// // 70
+// // 65
+// // 60
+// // 55
+// // 50
+// // 45
+// // 40
+// // 35
+// // 30
+// // 25
+// // 20
+// // 15
+// // 10
+// // 5
+//
 for(var i = 105; i>=5, i--;){
     if (i % 5 === 0 && i !== 0)
         console.log(i);
