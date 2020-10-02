@@ -72,7 +72,6 @@
 // 	i++;
 // }
 
-
 // TODO TOGETHER: Why doesnt the example above run?
 //ten is not less than ten
 
@@ -99,18 +98,19 @@
 //     i+=2;
 // }
 
-var i = 0;
-
-do {
-    console.log(i);
-    i+=2;
-} while (i <= 20);
+// var i = 0;
+//
+// do {
+//     console.log(i);
+//     i+=2;
+// } while (i <= 20);
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
-
-do{
-    var myColor = prompt("What is your favorite color?")
-} while(myColor !== "blue");
+//
+// do{
+//     var myColor = prompt("What is your favorite color?")
+// } while(myColor !== "blue");
+// alert("Blue is a garbage color, why didn't you pick something else?");
 
 /*********************************************
  *               FOR LOOPS
@@ -122,29 +122,52 @@ do{
 // }
 
 //TODO TOGETHER: Explore basic for loop syntax
-
-
-// TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
-
-
-// TODO TOGETHER: Why are loops beneficial?
-
-
-// TODO TOGETHER: Console.log each color from the array randomColors
-//  var randomColors = ["red","orange","yellow","blue","green"]
-
-
-// for (var i = 0; i < randomColors.length; i++){
-// 	console.log(randomColors[i]);;
+// for(initialize; condition; increment){
+//
 // }
 
 
+// TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
+// for(var i = 0; i <=5; i++){
+//     console.log(i);
+// }
+
+// TODO TOGETHER: Why are loops beneficial?
+// Avoiding redundancies and increasing efficiency.
+
+// TODO TOGETHER: Console.log each color from the array randomColors
+ var randomColors = ["red","orange","yellow","blue","green"]
+//
+// console.log(randomColors[0]);
+// console.log(randomColors[1]);
+// console.log(randomColors[2]);
+// console.log(randomColors[3]);
+// console.log(randomColors[4]);
+
+// for (var i = [0]; i < [5]; i++){
+// 	console.log(randomColors[i]);;
+// }
+//
+// //another way to write using .length
+// for (var i = [0]; i < randomColors.length; i++){
+//     console.log(randomColors[i]);;
+// }
+
 
 // TODO TOGETHER: Using a for loop, log all even numbers 0 - 100;
-
+// for(var i =0; i <= 100; i++){
+//     if(i % 2 === 0){
+//         console.log(i);
+//     }
+// }
 
 // TODO: Using a for loop, log all numbers divisible by 5, from 0 - 100;
 
+// for(var i =0; i <= 100; i++){
+//     if(i % 5 === 0){
+//         console.log(i);
+//     }
+// }
 
 // TODO: Using a for loop, complete the FizzBuzz challenge:
 //  Your program should count up to 100.
@@ -153,6 +176,12 @@ do{
 //  If divisible by 3 and 5, log "FizzBuzz"
 //  All other cases, just log the number.
 
+// for(var i = 1; i<=100; i++) {
+//     if (i % 15 === 0) console.log("FizzBuzz");
+//     else if (i % 3 == 0) console.log("Fizz");
+//     else if (i % 5 == 0) console.log("Bizz");
+//     else console.log(i);
+// }
 
 
 /*********************************************
@@ -176,13 +205,16 @@ do{
 // }
 
 
+
 // We can get an iteration to skip using continue;
 // for (var i = 1; i < 100; i++) {
 //
 // 	if (i % 2 !== 0) {
 // 		// skipping all odd numbers;
-// 		continue;
-// 	}
+//         console.log("Skipping an odd number!");
+//         continue;
+//         console.log("test");
+//     }
 //
 // 	console.log('Here is a lovely even number: ' + i);
 // }
