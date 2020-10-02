@@ -112,6 +112,35 @@ alert(analyzeColor(colorChoice));
  * return value.
  */
 
+function calculateTotal(luckyNumber, totalAmount){
+    var discountRate = 0;
+	switch(luckyNumber){
+        case 0:
+            discountRate = 0;
+            break;
+        case 1:
+            discountRate = .1;
+            break;
+        case 2:
+            discountRate = .25;
+            break;
+        case 3:
+            discountRate = .35;
+            break;
+        case 4:
+            discountRate = .50;
+            break;
+        case 5:
+            discountRate = 1;
+            break;
+    }
+	return totalAmount - (totalAmount * discountRate);
+}
+
+
+
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -120,8 +149,11 @@ alert(analyzeColor(colorChoice));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-
+var luckyNumber = Math.floor(Math.random() * 6);
+console.log(luckyNumber);
+var totalBillPrompt = parseFloat(prompt("What was your total bill?"));
+var finalAmount = calculateTotal(luckyNumber, totalBillPrompt);
+alert("Your lucky number was: " + luckyNumber + " Your total bill was: " + totalBillPrompt + " Your final discounted bill was " + finalAmount);
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -138,3 +170,24 @@ alert(analyzeColor(colorChoice));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var userConfirm = confirm("Would you like to enter a number?");
+
+if(userConfirm){
+	var userNumInput = prompt("Please enter a number.");
+	console.log("user entered the following; " + userNumInput);
+    var isNumber = !isNaN(userNumInput);
+	if(isNumber){
+        var userNumber = parseFloat(userNumInput);
+        var isEven = userNumber % 2 === 0;
+        console.log("The user's number is even: " + isEven);
+        var evenMessage = (isEven) ? "Your number is even!" : "Your number is odd!";
+         alert(evenMessage);
+        alert(userNumber + 100);
+        var posNegMessage = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
+        alert( posNegMessage);
+    } else {
+        // sad path ==> not a number
+        alert("Hey, that's not a number!");
+    }
+}
