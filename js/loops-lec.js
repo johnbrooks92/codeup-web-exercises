@@ -29,7 +29,7 @@
 //TODO TOGETHER: Create a while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
 
-// var i = 0;
+// var i = 2;
 // while (i <= 20) {
 //     console.log(i);
 //     i+=2;
