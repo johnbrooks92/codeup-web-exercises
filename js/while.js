@@ -52,14 +52,19 @@ while (i === 2) {
 //
 
 
-var allCones = Math.floor(Math.random() * 50) + 50;
+
 
 var i = 0
 
+
+
+
 do {
+    var allCones = Math.floor(Math.random() * 50) + 50;
     var purchasedCones = Math.floor(Math.random() * 5) + 1;
+    var remainingCones = allCones - purchasedCones;
     i+=purchasedCones;
-    console.log("Total number sold today is " + purchasedCones + ". Total number remaining is " + (allCones-purchasedCones));
+    console.log("Total number sold today is " + purchasedCones + ". Total number remaining is " + (remainingCones));
 } while (i < allCones);
 
 
