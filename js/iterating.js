@@ -65,19 +65,32 @@
 
 
     function returnFirstElement(x){
-        return x.indexOf([])
+        var firstValue = x[0]
+        return [firstValue]
     }
 
-    console.log(names[returnFirstElement(names)]);
+    console.log(returnFirstElement(names));
+
+
+
+
+
+    function returnSecondElement(x){
+        var secondValue = x[1]
+        return [secondValue]
+    }
+
+    console.log(returnSecondElement(names));
 
 
 
 
 
     function returnLastElement(x){
-        return x.length - 1
+        var lastValue = [x.length - 1]
+        return [lastValue]
     }
 
     console.log(names[returnLastElement(names)]);
-
+//
 })();
