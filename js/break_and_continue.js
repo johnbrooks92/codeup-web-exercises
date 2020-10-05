@@ -5,12 +5,13 @@
 
 
 for(var i = prompt("Please provide an odd number from 1-50!"); i < 50; i++) {
-    if (i % 2 === 0)
+    if (i % 2 === 0 || i < 1 || i > 50)
         alert(prompt("Try Again!"));
     else if (i % 2 !==0)
         console.log(i);
         break;
 }
+
 
 // Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
