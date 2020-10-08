@@ -11,14 +11,14 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = new Object();
-
-    person.firstName = "John";
-    person.lastName = "Brooks";
-    person.sayHello = function() {
-        console.log("Hello from " + (person.firstName) + " " + (person.lastName) + "!");
-    };
-    console.log(person);
+    // var person = new Object();
+    //
+    // person.firstName = "John";
+    // person.lastName = "Brooks";
+    // person.sayHello = function() {
+    //     console.log("Hello from " + (person.firstName) + " " + (person.lastName) + "!");
+    // };
+    // console.log(person);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -30,9 +30,9 @@
      */
 
 
-    ///This solution was combined to the previous one.
-    ///This solution was combined to the previous one.
-    ///This solution was combined to the previous one.
+    /// Note from Student - This solution was combined to the previous one.
+    /// Note from Student - This solution was combined to the previous one.
+    /// Note from Student - This solution was combined to the previous one.
 
 
 
@@ -51,11 +51,19 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper){
+        if(shopper.amount >= 200)
+            return console.log(shopper.name + " earned a discount on their purchase of $200 or more! Your total before discount was $" + shopper.amount + ". You saved $" + shopper.amount * .12 + " on your purchase. Your new total after discount is $" + shopper.amount * .88);
+        else
+            return console.log(shopper.name + " your total today is $" + shopper.amount+ ". Do you need anything else today? With another $20 in items you will qualify for an additional 12% discount!")
+    });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -69,6 +77,51 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            author: {
+                firstName: "S.E." ,
+                lastName: "Hinton"
+            },
+            title: ["And Then There Were None"]
+        },
+        {
+            author: {
+                firstName: "Zora Neale",
+                lastName: "Hurston"
+            },
+            title: ["Their Eyes Were Watching God"]
+        },
+        {
+            author: {
+                firstName: "J.K",
+                lastName: "Rowling"
+            },
+            title: ["Harry Potter and the Philosophor's Stone"]
+        },
+        {
+            author: {
+                firstName: "Shel",
+                lastName: "Silverstein"
+            },
+            title: ["The Giving Tree"]
+        },
+        {
+            author: {
+                firstName: "Dr.",
+                lastName: "Seuss"
+            },
+            title: ["Green Eggs & Ham"]
+        }
+    ];
+
+    console.log(books[3].author.lastName);
+    console.log(books[2].author.firstName);
+    console.log(books[0].title);
+
+
+
 
     /**
      * TODO:
@@ -94,6 +147,15 @@
      *      ---
      *      ...
      */
+
+    var bookNumber = books.indexOf() + 1
+
+
+    books.forEach(function(book){
+        return console.log("Book #" + (bookNumber));
+    });
+
+
 
     /**
      * Bonus:
