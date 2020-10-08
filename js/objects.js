@@ -34,7 +34,7 @@
     /// Note from Student - This solution was combined to the previous one.
     /// Note from Student - This solution was combined to the previous one.
 
-
+    /// or could use dot function instead per Sophie.
 
 
     /** TODO:
@@ -61,7 +61,7 @@
         if(shopper.amount >= 200)
             return console.log(shopper.name + " earned a discount on their purchase of $200 or more! Your total before discount was $" + shopper.amount + ". You saved $" + shopper.amount * .12 + " on your purchase. Your new total after discount is $" + shopper.amount * .88);
         else
-            return console.log(shopper.name + " your total today is $" + shopper.amount+ ". Do you need anything else today? With another $20 in items you will qualify for an additional 12% discount!")
+            return console.log(shopper.name + " your total today is $" + shopper.amount + ". Do you need anything else today? With another $20 in items you will qualify for an additional 12% discount!")
     });
 
 
@@ -98,7 +98,7 @@
                 firstName: "J.K",
                 lastName: "Rowling"
             },
-            title: ["Harry Potter and the Philosophor's Stone"]
+            title: ["Harry Potter and the Goblet of Fire"]
         },
         {
             author: {
@@ -148,14 +148,16 @@
      *      ...
      */
 
-    var bookNumber = books.indexOf() + 1
-
-
-    books.forEach(function(book){
-        return console.log("Book #" + (bookNumber));
+    books.forEach(function(book, i){
+        var output = "";
+        output += "Book #" + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
     });
 
-
+books.forEach(showBookInfo)
 
     /**
      * Bonus:
@@ -168,4 +170,29 @@
      *   `showBookInfo` function.
      */
 
+
+    function createBook(title, first, last){
+        var book = {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+        };
+
+    }
+
+    books.push(createBook("Cat's Cradle", "Kurt", "V"));
+
+
+    function showBookInfo (book, i) {
+        var output = "";
+        output += "Book #" + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    }
+
+    console.log(showBookInfo("Cat's Cradle", [5]));
 })();
