@@ -41,3 +41,7 @@
 //                  href = location or navigate to. target attribute specifies how a link opens.
 // *  Images = Inline and void element. Displays an img. src attribute specifies image URL, alt specifies alternate text.
 // *  Tables = Used to display tabular data. tr = table row, th = table heading, td = tables cells.
+
+
+
+"I'm in Florida with the family."
