@@ -45,3 +45,5 @@
 
 
 "I'm in Florida with the family."
+
+"Now I am back in Texas. Looking forward to school tomorrow."
