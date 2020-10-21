@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #cbffcd;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+form {
+    margin: 1em;
+    padding: 1em;
+}
+fieldset {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    padding: 1em;
+    border: 0;
+    background: white;
+}
+.width-80 {
+    width: 80%;
+    margin: auto;
+}
+.form-group {
+    width: 100%;
+    margin: .5em auto;
+}
+.form-label {
+    font-weight: bold;
+}
+.btn-block {
+    width: 100%;
+}
+.btn {
+    background-color: #0fb784;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid lightgray;
+}
+.form-control {
+    width: calc(100% - 4px);
+    padding: 4px 0;
+    margin: .5em auto;
+}
