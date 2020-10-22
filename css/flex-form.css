@@ -36,6 +36,7 @@ body {
     border-radius: 5px;
     /* TODO: Add an automatic margin and a flex container to this selector */
     margin: 0 auto;
+    display: flex;
     justify-content: center;
     align-items: stretch;
 }
@@ -62,4 +63,5 @@ body {
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
+    flex-basis: 15em;
 }
