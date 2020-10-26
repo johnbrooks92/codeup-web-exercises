@@ -1,0 +1,42 @@
+/* Mobile device styling by default (mobile-first) */
+h1{
+    text-align: center;
+}
+body {
+    background-color: blue;
+    margin: 0;
+    font-size: 1.2em;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+div {
+    flex-basis: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+/* width of divs should be 50% and background should be red */
+@media screen and (min-width: 768px) {
+    body {
+        background: purple;
+        font-size: 1em;
+    }
+    .container {
+        width: 90%;
+        max-width: 1400px;
+    }
+    div {
+        flex-basis: 50%;
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+/* width of divs should be 25% and background should be green */
+@media screen and (min-width: 1200px) {
+    body {
+        background: yellow;
+    }
+    div {
+        flex-basis: 25%;
+    }
+}
