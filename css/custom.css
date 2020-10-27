@@ -1,0 +1,118 @@
+.body-width{
+    margin: 0 auto;
+    width: 80%;
+    padding: 0;
+}
+nav{
+    margin-bottom: 1em;
+}
+nav>div{
+    display: flex;
+}
+.sign-up a {
+    color: #222222;
+}
+.form-control{
+    margin-left: 6px;
+}
+.container{
+    padding: 0;
+}
+.nav-item{
+    padding: 3px 0;
+}
+.nav-margin{
+    margin-left: 4px;
+    margin-top: 3px;
+}
+.nav-item:hover{
+    background-color: #ededed;
+    transition: .2s;
+}
+.jumbotron{
+    background-image: url("../img/pizzaworldbanner.png");
+}
+.jumbotron h1{
+    background-color: lightgray;
+    opacity: 0.6;
+    width: 100%;
+    text-align: center;
+    font-family: Dialog;
+    font-weight: bold;
+}
+.badge-dark{
+    background-color: gray;
+}
+.btn-right{
+    float: right;
+}
+.list-group {
+    border: 1px solid lightgray;
+}
+.btn{
+    background-color: #007BFF;
+}
+.btn:hover {
+    background-color: #2F447B;
+}
+.card{
+    margin-bottom: 1em;
+}
+.card-body{
+    padding: 0px;
+}
+.card-border {
+    border: solid 1px #eee;
+    margin: 0 1em 1em;
+    padding-top: 1em;
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+.no-radius{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.card-header{
+    background-color: #007BFF;
+    color: white;
+}
+.card-title{
+    border: solid 1px lightgray;
+    padding: 1em;
+    background-color: #eee;
+    margin: 1em 1em 0em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+.card-text{
+    margin-left: 2em;
+}
+.card-footer{
+    margin: 0;
+    height: 4em;
+    background-color: #eee;
+}
+.form-sizing{
+    width: 97%;
+    margin: 1em;
+}
+label{
+    margin-left: .5em;
+}
+.flex-right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.btn-text1{
+    text-decoration: none;
+    color: white;
+    padding: 100% 0;
+}
+.btn-text1:hover{
+    text-decoration: none;
+    color: white;
+    padding: 100% 0;
+}
+.no-bottom{
+    margin-top: 0;
+}
