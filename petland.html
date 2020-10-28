@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Petland</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        #main-jumbotron {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url("img/bed-animal-dog.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: dodgerblue;
+        }
+
+
+        .card-img-top{
+            width: 100%;
+            height: 50vw;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width:768px) {
+            .card-img-top {
+                height: 20vw;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="img/dog-transparent.png" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--<-&#45;&#45; Navbar above; JumboTron below;&#45;&#45;&ndash;&gt;-->
+
+<div class="jumbotron jumbotron-fluid" id="main-jumbotron">
+    <div class="container">
+        <h1 class="display-4">Petland</h1>
+        <p class="lead">Checkout our selection of loving pets.</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+    </div>
+</div>
+<!--<-end of jumbotron->-->
+
+<!--start main container-->
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rover</h5>
+                    <p class="card-text">Boof!</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dakota</h5>
+                    <p class="card-text">Bark Bark!</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Perry</h5>
+                    <p class="card-text">Squawk</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Duke</h5>
+                    <p class="card-text">Growl</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Terry</h5>
+                    <p class="card-text">Likes to lick owner.</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                <img src="img/animal6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cooper</h5>
+                    <p class="card-text">HOOOOWL</p>
+                    <a href="#" class="btn btn-primary">Adopt Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    end of row   -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
