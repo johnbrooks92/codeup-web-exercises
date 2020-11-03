@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<h1 id="main-header">Javascript is Cool</h1>
-<ul id="list-full">
+<h1 id="main-header">The DOM Query Page</h1>
+<ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
@@ -16,7 +16,7 @@
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
-    Mission Accomplished!
+    My top 4 DOM's of all-time are DOM Toretto, DOMinic Fike, DOMo Genesis, DOM Kennedy.
 </p>
 
 <script>
@@ -27,25 +27,39 @@
         console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        mainHeader.innerHTML = "Javascript is Cool"
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
         console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
+        subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementById('list-full');
+        var listItems = document.getElementsByTagName('li');
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
+        for (var i = 0; i < listItems.length; i += 1) {
+            if (listItems[i].getAttribute('data-dbid') === '1') {
+             listItems[i].style.color = "blue";
+             continue;
+            }
+            if (i % 2 !== 0) {
+                console.log(listItems[i]);
+                listItems[i].style.color = "grey";
+            }
+        }
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
         console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        subParagraphs[0].innerText = "Mission Accomplished!";
     })();
 </script>
 </body>
