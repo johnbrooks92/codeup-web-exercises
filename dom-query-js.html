@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1 id="main-header">The DOM Query Page</h1>
+<h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -16,12 +16,31 @@
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
-    My top 4 DOM's of all-time are DOM Toretto, DOMinic Fike, DOMo Genesis, DOM Kennedy.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<div>
+    <button id="chg-header-btn">Header</button>
+    <button id="chg-subheader-btn">SubHeader</button>
+    <button id="chg-list-btn">List</button>
+    <button id="chg-paragraph-btn">Paragraph</button>
+</div>
 
 <script>
     (function() {
         "use strict";
+
+        var chgHeaderBtn = document.getElementById("chg-header-btn");
+        var chgSubHeaderBtn = document.getElementById("chg-subheader-btn");
+        var chgListBtn = document.getElementById("chg-list-btn");
+        var chgParagraphBtn = document.getElementById("chg-paragraph-btn");
+
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById('main-header');
         console.log(mainHeader);
@@ -57,9 +76,14 @@
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
         console.log(subParagraphs);
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerText = "Mission Accomplished!";
+
+        chgHeaderBtn.addEventListener('click', mainHeader);
+        chgSubHeaderBtn.addEventListener('click', subHeader);
+        chgListBtn.addEventListener('click', listItems);
+        chgParagraphBtn.addEventListener('click', subParagraphs);
     })();
 </script>
 </body>
