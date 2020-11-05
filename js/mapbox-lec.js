@@ -28,8 +28,8 @@ var map = new mapboxgl.Map({
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~10 minutes)
 
 //
-// map.scrollZoom.enable({ around: 'center' })
-// options.pitchWithRotate
+map.scrollZoom.enable({ around: 'center' })
+options.pitchWithRotate
 
 
 
