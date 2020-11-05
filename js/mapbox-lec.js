@@ -72,12 +72,21 @@ var alamoMarker = new mapboxgl.Marker(markerOptions)
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
 
-var popup = new mapboxgl.Popup()
-    .setLngLat([-98.489615, 29.426827])
-    .setHTML("<h5>Codeup Rocks!</h5>")
-    .addTo(map);
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-98.489615, 29.426827])
+//     .setHTML("<h5>Codeup Rocks!</h5>")
+//     .addTo(map);
+
+// TODO TOGETHER: Comment out the popup we just added. Add a popup to the alamo marker.
+
+// var alamoPopUp = new mapboxgl.Popup()
+//     .setHTML("<p>Remember the Alamo</p>")
+//     .addTo(map);
+//
+// alamoMarker.setPopup(alamoPopUp);
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
+
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
 
 
@@ -91,6 +100,13 @@ var popup = new mapboxgl.Popup()
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
 
+geocode("600 Navarro St #350, San Antonio, TX 78205", mapboxToken).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(20);
+});
+
+console.log(result);
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
