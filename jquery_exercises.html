@@ -93,13 +93,18 @@
     $(document).ready(function() {
         "use strict";
 
+        $('h1').click(function (){
+            $(this).css('background','red')
+        })
 
-        $('p, h1, li').html("You have now entered the domain of an FPS hater!");
-
-
-
-
-
+        $('p').dblclick(function(e){
+            $(e.target).css('font-size', '18px')
+        })
+        $('li').hover(function(e){
+            $(e.target).css('color','red');
+        }, function(e) {
+            $(e.target).css('color','black');
+        })
     });
 
 </script>
