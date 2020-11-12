@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Project</title>
+    <style>
+        body{
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #mando{
+            visibility: hidden;
+            -webkit-transition: opacity 7s, visibility 7s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #droids{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #goku{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #vegeta{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #smash{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #sly{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #eren{
+            visibility: hidden;
+            -webkit-transition: opacity 3s, visibility 3s;
+            transition: opacity 10s, visibility 10s;
+            opacity: 0;
+        }
+        #yusuke{
+            visibility: hidden;
+            -webkit-transition: opacity 15s, visibility 15s;
+            transition: opacity 20s, visibility 20s;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<h1><img src="img/konami.png"></h1>
+
+<p>
+    Here are the inputs for codes, make sure to add the "enter/return" button at the end of each code:
+</p>
+<p>
+    - For today's lesson and gamers everywhere: 'up, up, down, down, left, right, left, right, b, a'
+</p>
+<p>
+    - The legendary warrior: 'goku'
+</p>
+<p>
+    - The powerful prince: 'vegeta'
+</p>
+<p>
+    - The most universally beloved fighting game: 'smash'
+</p>
+<p>
+    - My favorite PS exclusive and fav game series: 'sly'
+</p>
+<p>
+    - My favorite anime of today: 'eren'
+</p>
+<p>
+    - My favorite anime of ever: 'yuyu'
+</p>
+<!--Mando Image and Audio (Correct Code)-->
+
+<div id ='mando'><img src="img/mando.gif" height="500" /></div>
+
+<audio id="the-way">
+    <source src="audio/this-is-the-way.mp3" type="audio/mpeg">
+</audio>
+
+<!--R2-D2 Image and Audio (Incorrect Code)-->
+<div id ='droids'><img src="img/r2d2scream.gif" height="500" /></div>
+
+<audio id="r2scream">
+    <source src="audio/r2d2-scream.mp3" type="audio/mpeg">
+</audio>
+
+<!--Goku Image and Audio -->
+<div id ='goku'><img src="img/goku.gif" height="500" /></div>
+
+<audio id="holdback">
+    <source src="audio/hold-anything-back.mp3" type="audio/mpeg">
+</audio>
+
+<!--Vegeta Image and Audio -->
+<div id ='vegeta'><img src="img/majin-vegeta.gif" height="500" /></div>
+
+<audio id="prince">
+    <source src="audio/simple-answer.mp3" type="audio/mpeg">
+</audio>
+
+<!--Smash Bros Image and Audio -->
+<div id ='smash'><img src="img/smash.gif" height="500" /></div>
+
+<audio id="ssb-music">
+    <source src="audio/ssb-theme.mp3" type="audio/mpeg">
+</audio>
+
+<!--Sly Cooper Image and Audio -->
+<div id ='sly'><img src="img/sly.jpg" height="500" /></div>
+
+<audio id="cooper-theme">
+    <source src="audio/sly.mp3" type="audio/mpeg">
+</audio>
+
+
+<!--Eren Jaeger Image and Audio -->
+<div id ='eren'><img src="img/eren.gif" height="500" /></div>
+
+<audio id="aot-theme">
+    <source src="audio/aot-theme.mp3" type="audio/mpeg">
+</audio>
+
+
+<!--Spirit Gun Image and Audio -->
+<div id ='yusuke'><img src="img/yusuke.gif" height="500" /></div>
+
+<audio id="spirit-gun">
+    <source src="audio/spirit-gun.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+
+    "use strict";
+
+    var konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var sequenceRefresh = [91 ,38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var sonGoku = [71, 79, 75, 85, 13];
+    var princeVegeta = [86, 69, 71, 69, 84, 65, 13];
+    var smashBros = [83, 77, 65, 83, 72, 13];
+    var slyCooper = [83, 76, 89, 13];
+    var erenJaeger = [84, 73, 84, 65, 78];
+    var spiritGun = [89, 85, 89, 85, 13];
+    var inputCode = [];
+
+
+    $('body').keyup(function(event){
+        inputCode.push(event.which);
+        console.log(inputCode);
+
+            if (inputCode.join(',') === konamiSequence.join(',') || inputCode.join(',') === sequenceRefresh.join(',')){
+                $('audio#the-way')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('This is the way.');
+                $('#mando').css({
+                'visibility': 'visible',
+                'opacity': '1'
+            });
+                $('h1').css({
+                    'display': 'none'
+                });
+                $('body').off();
+            } else if (inputCode.length >= sequenceRefresh.length) {
+                $('audio#r2scream')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('These are not the droids you are looking for...');
+                $('#droids').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === sonGoku.join(',')) {
+                $('audio#holdback')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('Meet the mightiest warrior in the universe');
+                $('#goku').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === princeVegeta.join(',')) {
+                $('audio#prince')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('Who is the prince of all Saiyans?');
+                $('#vegeta').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('#goku').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === smashBros.join(',')) {
+                $('audio#ssb-music')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('A challenger approaches!');
+                $('#smash').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('#goku').css({
+                    'display': 'none'
+                });
+                $('#vegeta').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === slyCooper.join(',')) {
+                $('audio#cooper-theme')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('A master thief among master thieves!');
+                $('#sly').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('#goku').css({
+                    'display': 'none'
+                });
+                $('#vegeta').css({
+                    'display': 'none'
+                });
+                $('#smash').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === erenJaeger.join(',')) {
+                $('audio#aot-theme')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('The Attack Titan is on the loose!');
+                $('#eren').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('#goku').css({
+                    'display': 'none'
+                });
+                $('#vegeta').css({
+                    'display': 'none'
+                });
+                $('#smash').css({
+                    'display': 'none'
+                });
+                $('#sly').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            } else if (inputCode.join(',') === spiritGun.join(',')) {
+                $('audio#spirit-gun')[0].play();
+                $('body').css('background-color', 'black');
+
+                alert('Try this, Spirit Gun!');
+                $('#yusuke').css({
+                    'visibility': 'visible',
+                    'opacity': '1'
+                });
+                $('#mando').css({
+                    'display': 'none'
+                });
+                $('#droids').css({
+                    'display': 'none'
+                });
+                $('#goku').css({
+                    'display': 'none'
+                });
+                $('#vegeta').css({
+                    'display': 'none'
+                });
+                $('#smash').css({
+                    'display': 'none'
+                });
+                $('#sly').css({
+                    'display': 'none'
+                });
+                $('#eren').css({
+                    'display': 'none'
+                });
+                $('h1').css({
+                    'display': 'none'
+                });
+            }
+    });
+
+</script>
+</body>
+</html>
