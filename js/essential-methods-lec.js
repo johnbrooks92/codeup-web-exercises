@@ -91,6 +91,11 @@ $(document).ready(function() {
         }
     });
 
+
+
+    //TODO TOGETHER: complete the Lock In functionality for Slytherin
+
+
     $('#lock-s').click(function(e) {
         $('#slytherin-house').toggleClass('slytherin');
         if($('#slytherin-house').hasClass('slytherin')){
@@ -99,9 +104,25 @@ $(document).ready(function() {
             $(this).text('Lock In');
         }
     });
-
-    //TODO TOGETHER: complete the Lock In functionality for Slytherin
     //TODO: Add the Lock In functionality for Ravenclaw and Hufflepuff
+
+    $('#lock-r').click(function(e) {
+        $('#ravenclaw-house').toggleClass('ravenclaw');
+        if($('#ravenclaw-house').hasClass('ravenclaw')){
+            $(this).text('Unlock');
+        }else {
+            $(this).text('Lock In');
+        }
+    });
+
+    $('#lock-h').click(function(e) {
+        $('#hufflepuff-house').toggleClass('hufflepuff');
+        if($('#hufflepuff-house').hasClass('hufflepuff')){
+            $(this).text('Unlock');
+        }else {
+            $(this).text('Lock In');
+        }
+    });
 
     /**********************************************
      * 			       Traversing
