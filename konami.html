@@ -157,7 +157,7 @@
     var princeVegeta = [86, 69, 71, 69, 84, 65, 13];
     var smashBros = [83, 77, 65, 83, 72, 13];
     var slyCooper = [83, 76, 89, 13];
-    var erenJaeger = [84, 73, 84, 65, 78];
+    var erenJaeger = [84, 73, 84, 65, 78, 13];
     var spiritGun = [89, 85, 89, 85, 13];
     var inputCode = [];
 
@@ -168,20 +168,20 @@
 
             if (inputCode.join(',') === konamiSequence.join(',')){
                 $('audio#the-way')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'grey');
 
                 alert('This is the way.');
                 $('#mando').css({
                 'visibility': 'visible',
                 'opacity': '1'
             });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
                 $('body').off();
             } else if (inputCode.length >= sequenceRefresh.length) {
                 $('audio#r2scream')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'blue');
 
                 alert('These are not the droids you are looking for...');
                 $('#droids').css({
@@ -196,7 +196,7 @@
                 });
             } else if (inputCode.join(',') === sonGoku.join(',')) {
                 $('audio#holdback')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'orange');
 
                 alert('Meet the mightiest warrior in the universe');
                 $('#goku').css({
@@ -209,12 +209,12 @@
                 $('#droids').css({
                     'display': 'none'
                 });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
             } else if (inputCode.join(',') === princeVegeta.join(',')) {
                 $('audio#prince')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'navy');
 
                 alert('Who is the prince of all Saiyans?');
                 $('#vegeta').css({
@@ -230,12 +230,12 @@
                 $('#goku').css({
                     'display': 'none'
                 });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
             } else if (inputCode.join(',') === smashBros.join(',')) {
                 $('audio#ssb-music')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'red');
 
                 alert('A challenger approaches!');
                 $('#smash').css({
@@ -254,12 +254,12 @@
                 $('#vegeta').css({
                     'display': 'none'
                 });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
             } else if (inputCode.join(',') === slyCooper.join(',')) {
                 $('audio#cooper-theme')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'purple');
 
                 alert('A master thief among master thieves!');
                 $('#sly').css({
@@ -281,12 +281,12 @@
                 $('#smash').css({
                     'display': 'none'
                 });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
             } else if (inputCode.join(',') === erenJaeger.join(',')) {
                 $('audio#aot-theme')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'green');
 
                 alert('The Attack Titan is on the loose!');
                 $('#eren').css({
@@ -311,12 +311,12 @@
                 $('#sly').css({
                     'display': 'none'
                 });
-                $('h1').css({
+                $('h1, p').css({
                     'display': 'none'
                 });
             } else if (inputCode.join(',') === spiritGun.join(',')) {
                 $('audio#spirit-gun')[0].play();
-                $('body').css('background-color', 'black');
+                $('body').css('background-color', 'yellow');
                 //
                 // alert('Try this, Spirit Gun!');
                 $('#yusuke').css({
@@ -344,8 +344,8 @@
                 $('#eren').css({
                     'display': 'none'
                 });
-                $('h1').css({
-                    'display': 'none'
+                $('h1, p').css({
+                    display: 'none'
                 });
             }
     });
