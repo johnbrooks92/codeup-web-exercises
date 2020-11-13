@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 175px;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+li {
+    text-align: center;
+    margin: 0;
+}
+section {
+    margin-top: 3%;
+}
+div.row{
+    margin-top: 2em;
+}
+.banner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.witch {
+    color: pink;
+}
