@@ -163,6 +163,7 @@
 
 
     $('body').keyup(function(event){
+        $(this).scrollTop(0);
         inputCode.push(event.which);
         console.log(inputCode);
 
@@ -170,7 +171,7 @@
                 $('audio#the-way')[0].play();
                 $('body').css('background-color', 'grey');
 
-                alert('This is the way.');
+                // alert('This is the way.');
                 $('#mando').css({
                 'visibility': 'visible',
                 'opacity': '1'
@@ -182,8 +183,8 @@
             } else if (inputCode.length >= sequenceRefresh.length) {
                 $('audio#r2scream')[0].play();
                 $('body').css('background-color', 'blue');
-
-                alert('These are not the droids you are looking for...');
+                //
+                // alert('These are not the droids you are looking for...');
                 $('#droids').css({
                     'visibility': 'visible',
                     'opacity': '1'
@@ -197,8 +198,8 @@
             } else if (inputCode.join(',') === sonGoku.join(',')) {
                 $('audio#holdback')[0].play();
                 $('body').css('background-color', 'orange');
-
-                alert('Meet the mightiest warrior in the universe');
+                //
+                // alert('Meet the mightiest warrior in the universe');
                 $('#goku').css({
                     'visibility': 'visible',
                     'opacity': '1'
@@ -215,8 +216,8 @@
             } else if (inputCode.join(',') === princeVegeta.join(',')) {
                 $('audio#prince')[0].play();
                 $('body').css('background-color', 'navy');
-
-                alert('Who is the prince of all Saiyans?');
+                //
+                // alert('Who is the prince of all Saiyans?');
                 $('#vegeta').css({
                     'visibility': 'visible',
                     'opacity': '1'
@@ -236,8 +237,8 @@
             } else if (inputCode.join(',') === smashBros.join(',')) {
                 $('audio#ssb-music')[0].play();
                 $('body').css('background-color', 'red');
-
-                alert('A challenger approaches!');
+                //
+                // alert('A challenger approaches!');
                 $('#smash').css({
                     'visibility': 'visible',
                     'opacity': '1'
@@ -260,8 +261,8 @@
             } else if (inputCode.join(',') === slyCooper.join(',')) {
                 $('audio#cooper-theme')[0].play();
                 $('body').css('background-color', 'purple');
-
-                alert('A master thief among master thieves!');
+                //
+                // alert('A master thief among master thieves!');
                 $('#sly').css({
                     'visibility': 'visible',
                     'opacity': '1'
@@ -287,8 +288,8 @@
             } else if (inputCode.join(',') === erenJaeger.join(',')) {
                 $('audio#aot-theme')[0].play();
                 $('body').css('background-color', 'green');
-
-                alert('The Attack Titan is on the loose!');
+                //
+                // alert('The Attack Titan is on the loose!');
                 $('#eren').css({
                     'visibility': 'visible',
                     'opacity': '1'
