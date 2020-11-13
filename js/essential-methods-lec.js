@@ -35,12 +35,19 @@ $(document).ready(function() {
     var gryffindor = $('#gryffindor').html();
     console.log(gryffindor);
 
+    $('#main-heading')..click(function(){
+    $(this).html('Hogwarts')   ;
+    })
+
     // TODO TOGETHER: store the html of #main-heading in a variable named mainHeading
+
+    var mainHeading=$('#main-heading').html();
+    console.log(mainHeading);
     // TODO: uncomment the line below
-    // alert(mainHeading);
+    alert(mainHeading);
 
     // TODO TOGETHER: using the css method, grab the current width of the sorting hat img. Console log your results
-
+    console.log($('img').css('width'));
     /************
      *   CSS
      ************/
@@ -51,18 +58,25 @@ $(document).ready(function() {
     // TODO: Using a css method, change the banner background-color to black
     //  Hint: make sure you use the right selector
 
+    $('.banner').css('background-color', '#000')
+
     /**********************
      *  Class Manipulation
      **********************/
 
     // TODO TOGETHER: When the 'Houses' button is clicked, add the class 'house' to anything with a class of 'house-name'
+            $('#highlight-houses').click(function(){
+                $('.house-name').addClass('house');
+            })
 
     // TODO TOGETHER: Comment out the code above. Add the class of 'house' to all the 'house-names'
 
     // TODO: Write the event listener to remove the class instead
 
     // TODO TOGETHER: Refactor your addClass and removeClass methods to toggle the 'house' class instead
-
+        $('#highlight-houses').click(function(){
+            $('.house-name').toggleClass('house');
+        });
     // This provides the 'Lock In' functionality. Selected my button -> add an event listener
     $('#lock-g').click(function(e){
         //select heading to toggle background-color assigned in CSS
