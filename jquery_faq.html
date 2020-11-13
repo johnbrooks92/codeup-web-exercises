@@ -56,33 +56,54 @@
         </dd>
 </dl>
 
-<h3>Yellowstone National Park</h3>
+<h3 id="yellowstone-head" class="change-weight-1">Yellowstone National Park</h3>
     <ul>
         <li>Over 2 million acres.</li>
         <li>More than 900 miles of hiking trails.</li>
         <li>Hom to 330 species of birds.</li>
-        <li>You can get within 100 yards of bears or wolves and within 25 yards of bobcats and bison!</li>
+        <li class="last-item">You can get within 100 yards of bears or wolves and within 25 yards of bobcats and bison!</li>
     </ul>
-<h3>Everglades National Park</h3>
-<ul>
+<h3 id="everglades-head" class="change-weight-2">Everglades National Park</h3>
+    <ul>
     <li>Not so much a park as it is a river.</li>
     <li>The only ecosystem where alligators and crocodiles co-exist.</li>
     <li>Fires are common and benefit the ecosystem.</li>
-    <li>There are 16 endangered species among inhabitants.</li>
-</ul>
-<h3>Kruger National Park</h3>
-<ul>
+    <li class="last-item">There are 16 endangered species among inhabitants.</li>
+    </ul>
+<h3 id="kruger-head" class="change-weight-3">Kruger National Park</h3>
+    <ul>
     <li>Largest game reserves in Africa. Spans 19,633 kilometers.</li>
     <li>Home to 12,000 elephants, 27,000 African Buffalo, 1,000 leopards and more!</li>
     <li>Stays warm year-round.</li>
-    <li>Open to visitors since 1927! (Original entry fee just £1!).</li>
-</ul>
+    <li class="last-item">Open to visitors since 1927! (Original entry fee just £1!).</li>
+    </ul>
+<button class="button">Click Here</button>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 
 
     "use strict";
+    $(document).ready(function(){
 
+        $('.invisible').toggleClass('invisible')
+
+        $('.button').click(function(){
+            $('.last-item').css("background-color", "yellow")
+        })
+        $('#yellowstone-head').click(function(){
+            $('.change-weight-1').next().css('font-weight', 'bold');
+        })
+        $('#everglades-head').click(function(){
+            $('.change-weight-2').next().css('font-weight', 'bold');
+        })
+        $('#kruger-head').click(function(){
+            $('.change-weight-3').next().css('font-weight', 'bold');
+        })
+
+
+
+
+    })
 
 </script>
 </body>
