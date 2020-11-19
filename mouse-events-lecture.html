@@ -51,62 +51,62 @@
         "use strict";
 
         // Event Handler / Listener Function Review from JavaScript
-
+        //
         // with anon function
 
-        // var mainContainer = document.getElementById('container');
-        //
-        // mainContainer.addEventListener("click", function(e) {
-        //     console.log(e);
-        // });
+        var mainContainer = document.getElementById('container');
 
+        mainContainer.addEventListener("click", function(e) {
+            console.log(e);
+        });
+        //
         // with defined handler
 
-        // var mainContainer = document.getElementById('container');
-        //
-        // function logEventOb(e) {
-        //     console.log(e);
-        // }
-        //
-        // mainContainer.addEventListener("click", logEventOb);
+        var mainContainer = document.getElementById('container');
+
+        function logEventOb(e) {
+            console.log(e);
+        }
+
+        mainContainer.addEventListener("click", logEventOb);
 
 
         // jQuery with anon function
 
-        // $('#container').click(function(e) {
-        //     console.log(e);
-        // });
+        $('#container').click(function(e) {
+            console.log(e);
+        });
 
 
 
         // jQuery with defined handler
 
-        // function logEventOb(e) {
-        //     console.log(e);
-        // }
-        //
-        // $('#container').click(logEventOb);
+        function logEventOb(e) {
+            console.log(e);
+        }
+
+        $('#container').click(logEventOb);
 
 
         // Double click and using "this" or "e.target"
 
-        // $('li').dblclick(function() {
-        //     console.log(this);
-        //     $(this).css("background", "yellow");
-        // });
+        $('li').dblclick(function() {
+            console.log(this);
+            $(this).css("background", "yellow");
+        });
 
-        // $('li').dblclick(function(e) {
-        //     // console.log(e.target);
-        //     $(e.target).css("background", "yellow");
-        // });
+        $('li').dblclick(function(e) {
+            // console.log(e.target);
+            $(e.target).css("background", "yellow");
+        });
 
         // Hover
 
-        //SINGLE FUNCTION
+        // SINGLE FUNCTION
 
-        // $('.box').hover(function() {
-        //     $(this).css('border-radius', '100px');
-        // });
+        $('.box').hover(function() {
+            $(this).css('border-radius', '100px');
+        });
 
 
         //TWO FUNCTIONS
