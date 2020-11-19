@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+.heading{
+    width: 100%;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    color: #090103;
+    border: 5px solid #f1a50c;
+    flex-direction: column;
+}
+#title{
+    font-size: 35px;
+}
+.upperSection{
+    margin: 1% 5%;
+    color: #167491;
+    font-size: 22px;
+}
+.description{
+    font-size: 14px;
+}
+.descriptionHead{
+    text-decoration: underline;
+}
+.timeSection{
+    margin: .2em;
+}
+.long{
+    text-align: center;
+}
+.head{
+    font-weight: bold;
+    color: rgb(215, 146, 73);
+}
+.weekday{
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0986bf;
+}
+.weatherSection{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    height: 100vh;
+    flex-direction: column;
+    color: #0fe5be;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    overflow: scroll;
+}
+.search {
+    height: 4vh;
+    margin: auto 0;
+    align-self: center;
+    border: 1px solid #220901;
+    border-radius: 5px;
+    width: 25%;
+}
+#search{
+    width: 50%;
+}
+#map{
+    width: 100%;
+    height: 50vh;
+    border: 5px solid #220901;
+}
+.weatherCard{
+    width: 75%;
+    height: 85%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(34, 9, 1, .8);
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(34, 9, 1, .8);
+    border-radius: 15px;
+}
+#bulkArea{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30vh;
+    left: 1vw;
+    width: 98vw;
+    height: 100vh;
+    background-color: rgb(11, 34, 1);
+    color: #f4fffd;
+}
+.largeCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.noShow{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#close{
+    margin-left: auto;
+    width: 7%;
+    height: 10%;
+    background-color: rgba(34, 9, 1, .9);
+    color: #f4fffd;
+    border-radius: 5px;
+}
+#timeLabel{
+    font-size: 15px;
+}
+#time{
+    font-size: 18px;
+}
+.clock{
+    height: 55%;
+}
+.timeSection{
+    height: 4vh;
+}
+button:hover{
+    cursor: pointer;
+}
+span{
+    font-size: 18px;
+}
+
+@media screen and (min-width: 798px){
+    #title{
+        font-size: 35px;
+    }
+    #bulkArea{
+        top: 10vh;
+        height: 40vh;
+    }
+    .upperSection{
+        font-size: 14px;
+    }
+    .weatherSection{
+        padding: 5%;
+    }
+    .heading{
+        flex-direction: row;
+        height: 10vh;
+    }
+    .weatherSection{
+        flex-direction: row;
+        height: 40vh;
+        overflow: auto;
+        flex-wrap: wrap;
+    }
+    .clock{
+        height: 30%;
+    }
+    .timeSection{
+        height: 6vh;
+    }
+    #timeLabel{
+        font-size: 16px;
+    }
+    #time{
+        font-size: 20px;
+    }
+    .weatherCard{
+        width: 25%;
+        margin: auto 0;
+    }
+    .description{
+        font-size: 12px;
+    }
+    span{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1000px){
+    #title{
+        font-size: 75px;
+    }
+    #submit{
+        width: 10em;
+    }
+    .search{
+        height: 3vh;
+    }
+    .weatherSection{
+        padding: 0 5%;
+    }
+    .description{
+        font-size: 10px;
+    }
+    .descriptionHead{
+        margin-bottom: -.4em;
+    }
+    span{
+        font-size: 14px;
+    }
+    .weatherCard{
+        width: calc(100%/9);
+        margin: auto 0;
+    }
+    #time{
+        font-size: 18px;
+    }
+    #timeLabel{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1380px){
+    #title{
+        font-size: 75px;
+    }
+    .weatherSection{
+        padding: 0 1%;
+    }
+    .upperSection{
+        font-size: 18px;
+    }
+    #time{
+        font-size: 22px;
+    }
+    #search{
+        width: 20%
+    }
+    #submit{
+        width: 6em;
+    }
+}

@@ -35,7 +35,7 @@ $(document).ready(function() {
     var gryffindor = $('#gryffindor').html();
     console.log(gryffindor);
 
-    $('#main-heading')..click(function(){
+    $('#main-heading').click(function(){
     $(this).html('Hogwarts')   ;
     })
 

@@ -5,9 +5,35 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coding Notes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Roboto&display=swap" rel="stylesheet">
+    <title>Weather or Not</title>
 </head>
 <body>
-<!--<script src="js/notes.js"></script>-->
+<header>
+    <span class="heading">Weather Forecast</span>
+    <span id="date"></span>
+    <span id="time"></span>
+</header>
+<h3 id="city"> SAN ANTONIO, TX</h3>
+<div id="threeDayForecast" class="row"></div>
+<div id="mapContainer">
+    <div id="map"></div>
+
+</div>
+<div id="searchContainer">
+    <div id='geocoder' class='geocoder this' ></div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-utils.js"></script>
+<script src="js/notes.js"></script>
 </body>
 </html>
