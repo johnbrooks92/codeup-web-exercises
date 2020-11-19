@@ -114,7 +114,7 @@ $(document).ready(function (){
             $("#time").html(sunMotion(data.current.dt + data.timezone_offset + baseOffset));
 
             reverseGeocode(coordinates, mapboxToken).then((result) => {
-                $("#cityName").text(result);
+                $("#city").text(result);
             });
 
             weatherSpot[0].innerHTML = "";
@@ -141,7 +141,7 @@ $(document).ready(function (){
         }
         $("#time").html(sunMotion(data.current.dt));
         reverseGeocode(coordinates, mapboxToken).then((result) => {
-            $("#cityName").text(result);
+            $("#city").text(result);
         });
         for (let i = 0; i < data.daily.length; i++) {
             weatherSpot[0].innerHTML += forecast(data, i);
