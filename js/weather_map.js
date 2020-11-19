@@ -155,13 +155,13 @@ $(document).ready(function (){
         let html = `<div class="weatherCard">`;
         html += `<p class="weekday">${dayOfWeek(data.daily[i].dt)}</p>`;
         html += `<p class="head">${callDateOfForecast(data.daily[i].dt + data.timezone_offset)}</p>`;
-        html += `<p class="description">Sun rise: <span>${sunMotion(data.daily[i].sunrise)}</span></p>`;
-        html += `<p class="description">Sun set: <span>${sunMotion(data.daily[i].sunset)}</span></p>`;
+        html += `<p class="details">Sun rise: <span>${sunMotion(data.daily[i].sunrise)}</span></p>`;
+        html += `<p class="details">Sun set: <span>${sunMotion(data.daily[i].sunset)}</span></p>`;
         html += `<img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png">`;
-        html += `<p class="description">H: <span>${data.daily[i].temp.max}°</span></p>`;
-        html += `<p class="description">L: <span>${data.daily[i].temp.min}°</span></p>`;
-        html += `<p class="description">Feels Like: <span>${data.daily[i].feels_like.day}</span></p>`;
-        html += `<p class="description">Humidity: <span>${data.daily[i].humidity}</span></p>`;
+        html += `<p class="details">H: <span>${data.daily[i].temp.max}°</span></p>`;
+        html += `<p class="details">L: <span>${data.daily[i].temp.min}°</span></p>`;
+        html += `<p class="details">Feels Like: <span>${data.daily[i].feels_like.day}</span></p>`;
+        html += `<p class="details">Humidity: <span>${data.daily[i].humidity}</span></p>`;
         html += `</div>`;
         return html;
     }
