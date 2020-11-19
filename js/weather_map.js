@@ -2,7 +2,7 @@
 $(document).ready(function (){
 
 
-    let markerPos = [];
+    let markerPosition = [];
     let start = [-98.150363, 29.700665];
     const baseOffset = 21600;
 
@@ -15,12 +15,12 @@ $(document).ready(function (){
     });
     let map = new mapboxgl.Map(mapObj);
 
-    let initialMarker = {
+    let startMarker = {
         draggable: true,
         color: "#6fef13"
     }
 
-    let marker = new mapboxgl.Marker(initialMarker)
+    let marker = new mapboxgl.Marker(startMarker)
         .setLngLat(start)
         .addTo(map)
 
@@ -34,8 +34,8 @@ $(document).ready(function (){
     });
 
     geocoder.on("result", function(e){
-        markerPos[0] = e.result.center[0]
-        markerPos[1] = e.result.center[1]
+        markerPosition[0] = e.result.center[0]
+        markerPosition[1] = e.result.center[1]
         getWeather();
     });
 
@@ -43,8 +43,8 @@ $(document).ready(function (){
 
     function updateMarkerMain(){
         let location = marker.getLngLat();
-        markerPos[0] = (location.lng);
-        markerPos[1] = (location.lat);
+        markerPosition[0] = (location.lng);
+        markerPosition[1] = (location.lat);
         getWeather();
     }
 
@@ -71,8 +71,8 @@ $(document).ready(function (){
 
     function updateMarkerSecond(){
         let location = searchedMarker.getLngLat();
-        markerPos[0] = (location.lng);
-        markerPos[1] = (location.lat);
+        markerPosition[0] = (location.lng);
+        markerPosition[1] = (location.lat);
         getWeather();
     }
 
@@ -89,7 +89,7 @@ $(document).ready(function (){
                 speed: 1,
                 curve: 1
             });
-            markerPos = cord;
+            markerPosition = cord;
             getWeather();
         });
     }
@@ -101,8 +101,8 @@ $(document).ready(function (){
     function getWeather(){
         $.get("https://api.openweathermap.org/data/2.5/onecall", {
             appid: openWeatherApi,
-            lat: markerPos[1],
-            lon: markerPos[0],
+            lat: markerPosition[1],
+            lon: markerPosition[0],
             exclude: "minutely, hourly, alerts, current",
             units: "imperial"
         }).done((data) => {
@@ -111,7 +111,7 @@ $(document).ready(function (){
                 lng: data.lon
             }
             console.log(data);
-            $("#time").html(clockTime(data.current.dt + data.timezone_offset + baseOffset));
+            $("#time").html(sunMotion(data.current.dt + data.timezone_offset + baseOffset));
 
             reverseGeocode(coordinates, mapboxToken).then((result) => {
                 $("#cityName").text(result);
@@ -148,8 +148,6 @@ $(document).ready(function (){
         }
     })
 
-
-
     //DisplaysForecast
     function forecast (data, i){
         let html = `<div class="weatherCard">`;
@@ -166,15 +164,6 @@ $(document).ready(function (){
         return html;
     }
 
-
-    //Functionality for Sunrise/Sunset
-    function sunMotion(x){
-        let date = new Date(x * 1000);
-        let hours = date.getHours();
-        let minutes = "0" + date.getMinutes();
-
-        return `${hours}:${minutes.substr(-2)}`;
-    }
     // Days of Week
     function dayOfWeek(x){
         let d = new Date(x * 1000);
@@ -182,6 +171,16 @@ $(document).ready(function (){
         let day = d.getDay();
         return `${days[day]}`;
     }
+
+    // //Functionality for Sunrise/Sunset
+    function sunMotion(x){
+        let date = new Date(x * 1000);
+        let hours = date.getHours();
+        let minutes = "0" + date.getMinutes();
+
+        return `${hours}:${minutes.substr(-2)}`;
+    }
+
     //Gives Exact Date
     function callDateOfForecast(x){
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -192,5 +191,6 @@ $(document).ready(function (){
         let day = d.getDate();
         return `${day} ${m} ${year}`;
     }
+
 });
 
