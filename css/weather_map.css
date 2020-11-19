@@ -51,7 +51,7 @@ body{
     height: 50vh;
     border: 5px solid #ea4713;
 }
-.weatherCard{
+.weeklyWeatherForecast{
     width: 75%;
     height: 85%;
     margin: 1em 0;
@@ -74,15 +74,8 @@ span{
     #title{
         font-size: 35px;
     }
-    #bulkArea{
-        top: 10vh;
-        height: 40vh;
-    }
     .upperSection{
         font-size: 14px;
-    }
-    .weatherSection{
-        padding: 5%;
     }
     .heading{
         flex-direction: row;
@@ -106,7 +99,7 @@ span{
     #time{
         font-size: 20px;
     }
-    .weatherCard{
+    .weeklyWeatherForecast{
         width: 25%;
         margin: auto 0;
     }
@@ -121,12 +114,6 @@ span{
     #title{
         font-size: 75px;
     }
-    #submit{
-        width: 10em;
-    }
-    .search{
-        height: 3vh;
-    }
     .weatherSection{
         padding: 0 5%;
     }
@@ -139,7 +126,7 @@ span{
     span{
         font-size: 14px;
     }
-    .weatherCard{
+    .weeklyWeatherForecast{
         width: calc(100%/9);
         margin: auto 0;
     }
@@ -162,11 +149,5 @@ span{
     }
     #time{
         font-size: 22px;
-    }
-    #search{
-        width: 20%
-    }
-    #submit{
-        width: 6em;
     }
 }

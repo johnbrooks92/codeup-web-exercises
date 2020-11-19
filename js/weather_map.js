@@ -150,7 +150,7 @@ $(document).ready(function (){
 
     //DisplaysForecast
     function forecast (data, i){
-        let html = `<div class="weatherCard">`;
+        let html = `<div class="weeklyWeatherForecast">`;
         html += `<p class="weekday">${dayOfWeek(data.daily[i].dt)}</p>`;
         html += `<p class="head">${callDateOfForecast(data.daily[i].dt + data.timezone_offset)}</p>`;
         html += `<p class="details">Sun rise: <span>${sunMotion(data.daily[i].sunrise)}</span></p>`;
