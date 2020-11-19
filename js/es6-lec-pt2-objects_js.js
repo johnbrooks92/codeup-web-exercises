@@ -5,10 +5,10 @@
 *****************************************************************/
 //TODO TOGETHER: Create a newDog object using shorthand syntax
 
-// let breed = "Pug";
-// let age = 3;
-// let dogName = "Lexie";
-// let isCute = true;
+let breed = "Pug";
+let age = 3;
+let dogName = "Lexie";
+let isCute = true;
 //
 // //old way
 // let oldDog = {
@@ -25,8 +25,14 @@
 
 
 
-// //new way
-
+// // //new way
+//
+// let newDog = {
+// 	breed,
+// 	age,
+// 	dogName,
+// 	isCute
+// }
 
 
 
@@ -39,13 +45,13 @@
  *          Shorthand for creating variables from object properties
  *          Based on the name of the key
  *****************************************************************/
-
+//
 // var person = {
 // 	name: 'codeup',
 // 	age: 4
 // };
-
-// old way
+//
+// // old way
 //
 // var name = person.name;
 // var age = person.age;
@@ -56,10 +62,10 @@
 
 
 //TODO TOGETHER: REFACTOR the above approach using ES6
-
-
-
-
+//
+// const {name, age} = person;
+// console.log(name);
+// console.log(age);
 
 
 /*==============================================*/
@@ -72,24 +78,25 @@ const pals = {
 };
 
 //old way
-// let myDog = pals.dog;
-// let myCat = pals.cat;
-// let myMouse = pals.mouse;
-//
-//
-// console.log(myDog); //Spike
-// console.log(myCat); //Tom
-// console.log(myMouse); //Jerry
+let myDog = pals.dog;
+let myCat = pals.cat;
+let myMouse = pals.mouse;
+
+
+console.log(myDog); //Spike
+console.log(myCat); //Tom
+console.log(myMouse); //Jerry
 
 
 //TODO TOGETHER: REFACTOR the above approach using ES6
 //new way
 
 
+const{dog, cat, mouse} = pals;
 
-
-
-
+console.log(dog);
+console.log(cat);
+console.log(mouse);
 
 
 /*==============================================*/
@@ -103,11 +110,10 @@ const theFlash = {
 	powers: "Super Speed"
 }
 
+const{alias, powers} = theFlash;
 
-
-
-
-
+console.log(alias);
+console.log(powers);
 
 
 /*==============================================*/
@@ -121,12 +127,12 @@ let cats = ["CJ", "Claude", "Max"];
 // let cat3 = cats[2];
 
 
-//new way
+//new way *automatically assigns indexing*
 let [ cat1, cat2, cat3 ] = cats;
 
-// console.log(cat1);
-// console.log(cat2);
-// console.log(cat3);
+console.log(cat1);
+console.log(cat2);
+console.log(cat3);
 
 
 /*==============================================*/
@@ -140,21 +146,33 @@ const alphabet = ['A', 'B', 'C', 'D', 'E'];
 
 
 //TODO TOGETHER: new way
-
+//
+// let [ a, b, c ] = alphabet;
+//
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 
 
 
 //TODO TOGETHER: To skip an element...
-
-
+//IF YOU DO NOT PUT COMMAS FOR UNUSED ELEMENTS IT WILL ASSIGN IN ORDER AND NOT MATCH
+// let [ a, , , d, e ] = alphabet;
+//
+// console.log(a);
+// console.log(d);
+// console.log(e);
 
 
 
 //TODO TOGETHER: To get all elements...Spread operator *BONUS
-
-
-
+//rest contains the remaining elements
+const [a, b, c, ... rest] = alphabet
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(rest);
 
 
 /*==============================================*/
@@ -186,7 +204,7 @@ tellMeAbout(person);
 
 /*==============================================*/
 
-
+//1 function with 2 objects
 function getArea({height, width}){
 	return height * width;
 }
