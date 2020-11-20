@@ -210,14 +210,14 @@ function sayHello(name){
 
 
 //remove curly braces (if only one statement you can remove the return keyword, too.)
-let sayHelloC = (arg1) => arg1 + 1;
+let sayHelloC = (name) => name + 1;
 
 //you can also remove parenthesis if ony 1 input
 const sayHelloD = name => `Hello ${name}`;
 
 
 
-console.log(sayHelloD("Vivian")); //Hello Vivian
+console.log(sayHelloC("Vivian")); //Hello Vivian
 console.log(sayHelloD("Justin")); //Hello Justin
 console.log(sayHelloD("Sophie")); //Hello Sophie
 
@@ -296,18 +296,18 @@ console.log(addOneD(2));
  *****************************/
 //TODO Together: Refactor the following using ES6
 
-// old way
-function sayHello(name) {
-	if (typeof name === 'undefined') {
-		name = 'World';
-	}
-	return 'Hello, ' + name + '!';
-}
+// // old way
+// function sayHello(name) {
+// 	if (typeof name === 'undefined') {
+// 		name = 'World';
+// 	}
+// 	return 'Hello, ' + name + '!';
+// }
 
-// refactored to ES6
-function sayHello(name='World'){
-	return `Hello ${name}`;
-}
+// // refactored to ES6
+// function sayHelloNow(name='World'){
+// 	return `Hello ${name}`;
+// }
 
 // refactored to one line arrow function code
 const sayHelloNow = (name = "World") => `Hello ${name}`;
