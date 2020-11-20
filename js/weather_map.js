@@ -85,7 +85,7 @@ $(document).ready(function (){
             cord[1] = r[1];
             map.flyTo({
                 center: r,
-                zoom: 10,
+                zoom: 9,
                 speed: 1,
                 curve: 1
             });
@@ -155,7 +155,7 @@ $(document).ready(function (){
         html += `<p class="head">${callDateOfForecast(data.daily[i].dt + data.timezone_offset)}</p>`;
         html += `<p class="details">Sun rise: <span>${sunMotion(data.daily[i].sunrise)}</span></p>`;
         html += `<p class="details">Sun set: <span>${sunMotion(data.daily[i].sunset)}</span></p>`;
-        html += `<img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png">`;
+        html += `<img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png" alt="weatherIconMissing">`;
         html += `<p class="details">H: <span>${data.daily[i].temp.max}°</span></p>`;
         html += `<p class="details">L: <span>${data.daily[i].temp.min}°</span></p>`;
         html += `<p class="details">Feels Like: <span>${data.daily[i].feels_like.day}</span></p>`;
