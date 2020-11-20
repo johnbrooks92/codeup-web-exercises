@@ -1,102 +1,6 @@
 
 $(document).ready(function (){
 
-
-    let markerPosition = [];
-    let start = [-98.150363, 29.700665];
-    const baseOffset = 21600;
-
-    mapboxgl.accessToken = mapboxToken;
-    let mapObj = ({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center: start,
-        zoom: 8,
-    });
-    let map = new mapboxgl.Map(mapObj);
-
-    let startMarker = {
-        draggable: true,
-        color: "#6fef13"
-    }
-
-    let marker = new mapboxgl.Marker(startMarker)
-        .setLngLat(start)
-        .addTo(map)
-
-    let geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
-        minLength: 1,
-        marker: {
-            color: "black"
-        }
-    });
-
-    geocoder.on("result", function(e){
-        markerPosition[0] = e.result.center[0]
-        markerPosition[1] = e.result.center[1]
-        getWeather();
-    });
-
-    map.addControl(geocoder);
-
-    function updateMarkerMain(){
-        let location = marker.getLngLat();
-        markerPosition[0] = (location.lng);
-        markerPosition[1] = (location.lat);
-        getWeather();
-    }
-
-    marker.on("dragend", updateMarkerMain);
-
-
-    let search = document.getElementById("search");
-    let cord = [];
-    let otherMarker = {
-        draggable: true,
-        color: "#9b33db"
-    }
-
-
-
-    window.addEventListener("keydown", function (e){
-        if(e.key === "Enter"){
-            if(search.value.length > 0){
-                searchArea();
-                search.value = "";
-            }
-        }
-    });
-
-    function updateMarkerSecond(){
-        let location = searchedMarker.getLngLat();
-        markerPosition[0] = (location.lng);
-        markerPosition[1] = (location.lat);
-        getWeather();
-    }
-
-    let searchedMarker = new mapboxgl.Marker(otherMarker);
-
-    function searchArea(){
-        geocode(search.value, mapboxToken).then((r) => {
-            searchedMarker.setLngLat(r).addTo(map);
-            cord[0] = r[0];
-            cord[1] = r[1];
-            map.flyTo({
-                center: r,
-                zoom: 9,
-                speed: 1,
-                curve: 1
-            });
-            markerPosition = cord;
-            getWeather();
-        });
-    }
-
-    searchedMarker.on("dragend", updateMarkerSecond);
-
-
     //Calls Data form API for Forecast
     function getWeather(){
         $.get("https://api.openweathermap.org/data/2.5/onecall", {
@@ -192,5 +96,102 @@ $(document).ready(function (){
         return `${day} ${m} ${year}`;
     }
 
+    //END OF FORECAST
+    //------------------------------------------------------//
+    //BEGIN MAPBOX
+
+
+    let markerPosition = [];
+    let start = [-98.150363, 29.700665];
+    const baseOffset = 21600;
+
+    mapboxgl.accessToken = mapboxToken;
+    let mapObj = ({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        center: start,
+        zoom: 8,
+    });
+    let map = new mapboxgl.Map(mapObj);
+
+    let startMarker = {
+        draggable: true,
+        color: "#6fef13"
+    }
+
+    let marker = new mapboxgl.Marker(startMarker)
+        .setLngLat(start)
+        .addTo(map)
+
+    let geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        minLength: 1,
+        marker: {
+            color: "black"
+        }
+    });
+
+    geocoder.on("result", function(e){
+        markerPosition[0] = e.result.center[0]
+        markerPosition[1] = e.result.center[1]
+        getWeather();
+    });
+
+    map.addControl(geocoder);
+
+    function updateMarkerMain(){
+        let location = marker.getLngLat();
+        markerPosition[0] = (location.lng);
+        markerPosition[1] = (location.lat);
+        getWeather();
+    }
+
+    marker.on("dragend", updateMarkerMain);
+
+
+    let search = document.getElementById("search");
+    let cord = [];
+    let otherMarker = {
+        draggable: true,
+        color: "#9b33db"
+    }
+    let searchedMarker = new mapboxgl.Marker(otherMarker);
+
+
+    window.addEventListener("keydown", function (e){
+        if(e.key === "Enter"){
+            if(search.value.length > 0){
+                searchArea();
+                search.value = "";
+            }
+        }
+    });
+
+    function updateMarkerSecond(){
+        let location = searchedMarker.getLngLat();
+        markerPosition[0] = (location.lng);
+        markerPosition[1] = (location.lat);
+        getWeather();
+    }
+
+
+    function searchArea(){
+        geocode(search.value, mapboxToken).then((r) => {
+            searchedMarker.setLngLat(r).addTo(map);
+            cord[0] = r[0];
+            cord[1] = r[1];
+            map.flyTo({
+                center: r,
+                zoom: 9,
+                speed: 1,
+                curve: 1
+            });
+            markerPosition = cord;
+            getWeather();
+        });
+    }
+
+    searchedMarker.on("dragend", updateMarkerSecond);
 });
 
