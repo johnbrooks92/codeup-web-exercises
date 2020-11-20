@@ -192,15 +192,21 @@ const shoppingCarts = [
 ];
 
 // TODO: Using .reduce, return the total number of apples.
-const totalApples = shoppingCarts.reduce(function(total, cart){
-   return total + cart.apples;
-},0);
-
-console.log(totalApples);
-
-
+// const totalApples = shoppingCarts.reduce(function(total, cart){
+//    return total + cart.apples;
+// },0);
+//
+// console.log(totalApples);
 
 
+// how to accumulate multiple property values using one reduce method
+const totalFruit = shoppingCarts.reduce(function(eachFruit,cart){
+    Object.keys(cart).forEach(function (key){
+        eachFruit[key] = (eachFruit[key] || 0) + cart[key];
+    });
+    return eachFruit;
+},{});
+console.log(totalFruit);
 
 
 
