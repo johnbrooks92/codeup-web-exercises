@@ -215,7 +215,7 @@ const colorCount = colors.reduce(function(colorCount, color){
     } else {
         colorCount[color] += 1;
     }
-
+    // console.log(colorCount); //Uncommenting this will show the function's iteration steps.
     return colorCount;
 },{});
 //Default data type of initial value is going to be same as data type of current elements being iterated over if not specified.
@@ -232,6 +232,15 @@ const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
 //TODO TOGETHER: Using reduce, let's turn this into a string.
 
+
+// const oneLine = lyrics.reduce(function (currentString, word) {
+//     return `${currentString} ${word}`;
+//     // return currentString + word;   //this Syntax is the same as return above in functionality
+// });
+
+//Refactored Smaller
+const oneLine = lyrics.reduce((currentString, word) => `${currentString} ${word}`);
+console.log(oneLine);
 // Bonus: Create an Array of all the unique fur colors! Hint: check out the ES6 'Set' data type.
 
 var hamsters = [
