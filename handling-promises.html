@@ -28,10 +28,10 @@
     // TODO: if aPromise rejects, console.error 'VALUE_HERE is an odd number!'
     aPromise.then((data) => {
         console.log(data);
-        console.log('VALUE_HERE is an even number!');
+        console.log(`${data} is an even number!`);
     }).catch((err) => {
         console.log(err);
-        console.log('VALUE_HERE is an odd number!');
+        console.error(`${err} is an odd number!`);
     });
 
 </script>
