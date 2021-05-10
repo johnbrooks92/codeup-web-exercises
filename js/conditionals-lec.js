@@ -1,7 +1,40 @@
 "use strict";
 
-console.log("hello from conditionals lec.js!");
+// console.log("hello from conditionals lec.js!");
+// if (true) {
+//     let x = 5;
+// }
+// console.log(typeof x);
+// function sayHello(name) {
+//     return 'Hello, ' + name + '!';
+// }
+// const sayHello2 = (name) => { 'Hello, ' + name + '!' }
+// const sayHello3 = name => { 'Hello, ' + name + '!' }
+// const sayHello4 = (name) => `Hello, ${name}!`
+// console.log(sayHello);
+// console.log(sayHello2);
+// console.log(sayHello3);
+// console.log(sayHello4);
 
+
+// if (true) {
+//     let x = 5;
+// }
+// console.log(typeof x);
+function win(){
+    let numbers = [1, 2, 3, 4, 5];
+    numbers.map(n => n * 3)
+    console.log(numbers);
+}
+
+console.log(win(numbers));
+//
+// const isDivisibleBy3 = n => n % 3 === 0;
+//
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//
+// console.log(numbers.filter(isDivisibleBy3));
+// console.log(numbers);
 // // ================ REAL WORLD SCENARIO ================
 // // If a user is an admin,show a specific navbar
 // // If weather is rainy, show rain icon
@@ -279,116 +312,116 @@ console.log("hello from conditionals lec.js!");
 // console.log(checkLightColor("Red"));
 // console.log(checkLightColor("Brown"));
 //
+// //
 //
-
-// ================ NESTED STATEMENTS ===============
-//TODO Together:
-// If user is under 15, they are not eligible for a learners permit, else they are.
-// If they are eligible, check age.
-// If they are 15 they are eligible for a learners permit,
-// if they are 16 or older and have a permit, they are eligible for license,
-// if they are 16 or older and do not have a permit, they are not eligible for a license.
-
-var userAge = 16;
-var hasPermit = true;
- // 16 && has permit === true ===> eligible for license
-
-if(userAge < 15){
-    alert("Sorry, you are not of eligible age.")
-} else {
-
-    if (userAge === 15){
-        alert("You are eligible for a permit!")
-    } else if (userAge >= 16 && hasPermit === true){
-        alert("You are eligible for a license!")
-    } else if (userAge >= 16 && hasPermit === false){
-        alert("You are not eligible for a license as you have not obtained a permit.")
-    } else {
-        alert("Critical Internal Error. Call the DMV for further info.")
-    }
-}
-
-
-
-
-
-
-// ================ TERNARY STATEMENT ================
-
-//TODO Together: Regular way
+// // ================ NESTED STATEMENTS ===============
+// //TODO Together:
+// // If user is under 15, they are not eligible for a learners permit, else they are.
+// // If they are eligible, check age.
+// // If they are 15 they are eligible for a learners permit,
+// // if they are 16 or older and have a permit, they are eligible for license,
+// // if they are 16 or older and do not have a permit, they are not eligible for a license.
 //
-// var message;
-// var success = true;
+// var userAge = 16;
+// var hasPermit = true;
+//  // 16 && has permit === true ===> eligible for license
 //
-// if (success) {
-//     message = "Operation was successful.";
+// if(userAge < 15){
+//     alert("Sorry, you are not of eligible age.")
 // } else {
-//     message = "Oops, something went wrong.";
+//
+//     if (userAge === 15){
+//         alert("You are eligible for a permit!")
+//     } else if (userAge >= 16 && hasPermit === true){
+//         alert("You are eligible for a license!")
+//     } else if (userAge >= 16 && hasPermit === false){
+//         alert("You are not eligible for a license as you have not obtained a permit.")
+//     } else {
+//         alert("Critical Internal Error. Call the DMV for further info.")
+//     }
 // }
-// console.log(message);
 //
 //
-// var success = true;
-// var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
-// console.log(message)
 //
 //
-// //TODO: Refactor the following conditional as a ternary
 //
-// // var weather = "sunny";
-// // var weatherMessage;
 //
-// // if(weather === "rainy"){
-// //    weatherMessage = "It's raining!";
+// // ================ TERNARY STATEMENT ================
+//
+// //TODO Together: Regular way
+// //
+// // var message;
+// // var success = true;
+// //
+// // if (success) {
+// //     message = "Operation was successful.";
 // // } else {
-// //     weatherMessage = "Have a nice day!";
+// //     message = "Oops, something went wrong.";
+// // }
+// // console.log(message);
+// //
+// //
+// // var success = true;
+// // var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
+// // console.log(message)
+// //
+// //
+// // //TODO: Refactor the following conditional as a ternary
+// //
+// // // var weather = "sunny";
+// // // var weatherMessage;
+// //
+// // // if(weather === "rainy"){
+// // //    weatherMessage = "It's raining!";
+// // // } else {
+// // //     weatherMessage = "Have a nice day!";
+// // // }
+// //
+// // //WRITE YOUR TERNARY STATEMENT HERE!
+// //
+// // var weather = "Sunny"
+// //
+// // var weatherMessage = (weather) ? "It is raining!" : "This not the weather you are looking for. *uses Jedi Mind Trick*";
+// // console.log(weatherMessage);
+//
+// // =============== SWITCH STATEMENT ================
+// //TODO Together:
+// //
+// // var pizzaPreference = prompt("What kind of pizza do you like?");
+// //
+// // switch(pizzaPreference) {
+// //     case "pineapple and hot sauce":
+// //         alert("What a coincidence, that's my favorite!");
+// //         break;
+// //     case "cheese":
+// //         alert("Just plain cheese? Okay...");
+// //         break;
+// //     default:
+// //         alert(pizzaPreference + " isn't my favorite, but let's order some!");
+// //         break;
 // // }
 //
-// //WRITE YOUR TERNARY STATEMENT HERE!
 //
-// var weather = "Sunny"
+// //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 //
-// var weatherMessage = (weather) ? "It is raining!" : "This not the weather you are looking for. *uses Jedi Mind Trick*";
-// console.log(weatherMessage);
-
-// =============== SWITCH STATEMENT ================
-//TODO Together:
+// var weather = prompt("What is the weather like where you are today?");
 //
-// var pizzaPreference = prompt("What kind of pizza do you like?");
-//
-// switch(pizzaPreference) {
-//     case "pineapple and hot sauce":
-//         alert("What a coincidence, that's my favorite!");
+// switch(weather) {
+//     case "rainy":
+//         alert("Careful out there on the roads!");
 //         break;
-//     case "cheese":
-//         alert("Just plain cheese? Okay...");
+//     case "sunny":
+//         alert("Isnt that just the best when the sun is shining?");
+//         break;
+//     case "snow":
+//         alert("Snow is only fun Day 1.");
 //         break;
 //     default:
-//         alert(pizzaPreference + " isn't my favorite, but let's order some!");
+//         alert(weather + " isn't my favorite, but at least we aren't on fire, right?");
 //         break;
 // }
-
-
-//TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
-
-var weather = prompt("What is the weather like where you are today?");
-
-switch(weather) {
-    case "rainy":
-        alert("Careful out there on the roads!");
-        break;
-    case "sunny":
-        alert("Isnt that just the best when the sun is shining?");
-        break;
-    case "snow":
-        alert("Snow is only fun Day 1.");
-        break;
-    default:
-        alert(weather + " isn't my favorite, but at least we aren't on fire, right?");
-        break;
-}
-
-//TODO: Rewrite the intersection function from earlier as a switch statement.
+//
+// //TODO: Rewrite the intersection function from earlier as a switch statement.
 
 
 

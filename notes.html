@@ -1,3 +1,8 @@
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,35 +10,308 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>initial</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/notes.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Roboto&display=swap" rel="stylesheet">
-    <title>Weather or Not</title>
 </head>
 <body>
-<header>
-    <span class="heading">Weather Forecast</span>
-    <span id="date"></span>
-    <span id="time"></span>
-</header>
-<h3 id="city"> SAN ANTONIO, TX</h3>
-<div id="threeDayForecast" class="row"></div>
-<div id="mapContainer">
-    <div id="map"></div>
-
-</div>
-<div id="searchContainer">
-    <div id='geocoder' class='geocoder this' ></div>
-
+<div id="load">
+    <h1 id="loading">LOADING.....</h1>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>
+<div id="after">
+    <button id="displayForm">Add a Movie</button>
+    <div id="formSection">
+        <input placeholder="Title" id="title" onfocus="this.value=''">
+        <input placeholder="Year" id="year" onfocus="this.value=''">
+        <input placeholder="Minutes" id="minutes" onfocus="this.value=''">
+        <select name="rating" id="ratingGrade">
+            <option value="" disabled selected>Select your Rating</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+        <select name="genre" id="genre">
+            <option value="" disabled selected>Select your Genre</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="animated">Animated</option>
+            <option value="sport">Sport</option>
+        </select>
+        <button id="submit">Submit</button>
+    </div>
+    <div class="movieSection">
+
+    </div>
+    <div id="edit">
+        <button id="closeEdit">Close</button>
+        <label>
+            Title:
+            <input id="changeTitle" class="editInput">
+        </label>
+        <label>
+            Rating:
+            <select name="rating" id="changeRating" class="editInput">
+                <option value="" disabled selected>Select your Rating</option>
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+            </select>
+        </label>
+        <label>
+            Genre:
+            <select name="genre" id="changeGenre" class="editInput">
+                <option value="" disabled selected>Select your Genre</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="animated">Animated</option>
+                <option value="sport">Sport</option>
+            </select>
+        </label>
+        <label>
+            Year:
+            <input id="changeYear" class="editInput">
+        </label>
+        <label>
+            Minutes:
+            <input id="changeMinutes" class="editInput">
+        </label>
+        <button id="changeMovie">Edit</button>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/36f035c426.js" crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-<script src="js/mapbox-utils.js"></script>
-<script src="js/notes.js"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<script src = "js/notes.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>initial</title>-->
+<!--    <link rel="stylesheet" href="css/notes.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="load">-->
+<!--    <h1 id="loading">LOADING.....</h1>-->
+<!--</div>-->
+
+<!--<div id="after">-->
+
+<!--    <div id="formSection">-->
+<!--        <input placeholder="Title" id="title" onfocus="this.value=''">-->
+<!--        <select name="rating" id="ratingStars">-->
+<!--            <option value="" disabled selected>Select your Rating</option>-->
+<!--            <option value="1">1 Star</option>-->
+<!--            <option value="2">2 Stars</option>-->
+<!--            <option value="3">3 Stars</option>-->
+<!--            <option value="4">4 Stars</option>-->
+<!--            <option value="5">5 Stars</option>-->
+<!--        </select>-->
+<!--        <select name="genre" id="genre">-->
+<!--            <option value="" disabled selected>Select your Genre</option>-->
+<!--            <option value="action">Action</option>-->
+<!--            <option value="comedy">Comedy</option>-->
+<!--            <option value="drama">Drama</option>-->
+<!--            <option value="animated">Animated</option>-->
+<!--            <option value="horror">Horror</option>-->
+<!--        </select>-->
+<!--        <button id="submit">Submit</button>-->
+<!--    </div>-->
+<!--    <div class="movieSection">-->
+
+<!--    </div>-->
+<!--    <div id="edit">-->
+<!--        <button id="closeEdit">X</button>-->
+<!--        <label>-->
+<!--            new title-->
+<!--            <input id="changeTitle" class="editInput">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--            new rating-->
+<!--            <select name="rating" id="changeRating" class="editInput">-->
+<!--                <option value="" disabled selected>Select your Rating</option>-->
+<!--                <option value="1">1 Star</option>-->
+<!--                <option value="2">2 Stars</option>-->
+<!--                <option value="3">3 Stars</option>-->
+<!--                <option value="4">4 Stars</option>-->
+<!--                <option value="5">5 Stars</option>-->
+<!--            </select>-->
+<!--        </label>-->
+<!--        <label>-->
+<!--            new genre-->
+<!--            <select name="genre" id="changeGenre" class="editInput">-->
+<!--                <option value="" disabled selected>Select your Genre</option>-->
+<!--                <option value="action">Action</option>-->
+<!--                <option value="comedy">Comedy</option>-->
+<!--                <option value="drama">Drama</option>-->
+<!--                <option value="animated">Animated</option>-->
+<!--                <option value="horror">Horror</option>-->
+<!--            </select>-->
+<!--        </label>-->
+<!--        <button id="changeMovie">Edit</button>-->
+<!--    </div>-->
+
+<!--</div>-->
+<!--<script src="/js/keys.js"></script>-->
+<!--<script src="/js/jquery-2.2.4.js"></script>-->
+<!--<script src ="/js/notes.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <title>Movies App</title>-->
+<!--    <link href="css/notes.css" rel="stylesheet">-->
+<!--    &lt;!&ndash;BOOTSTRAP CSS&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<h1 id="load"></h1>-->
+<!--<div class="container">-->
+
+<!--    <div class="row">-->
+
+<!--        &lt;!&ndash;START CARDS&ndash;&gt;-->
+<!--        <div id="cards-container" class="col-8 col-md-8">-->
+
+<!--        </div>-->
+
+<!--        &lt;!&ndash;END CARDS&ndash;&gt;-->
+<!--        &lt;!&ndash;START FORM&ndash;&gt;-->
+<!--        <form>-->
+<!--            <div class="col-12 col-md-12">-->
+
+<!--                &lt;!&ndash;TITLE&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-title">Title</label>-->
+<!--                    <input type="text" class="form-control movie-title" id="movie-title" placeholder="Enter movie Title">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;YEAR&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-year">Year</label>-->
+<!--                    <input type="text" class="form-control movie-year" id="movie-year" placeholder="Enter Year">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;RATING&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-rating">Rating</label>-->
+<!--                    <select class="form-control movie-rating" id="movie-rating">-->
+<!--                        <option>&#45;&#45;Choose Movie Rating&#45;&#45;</option>-->
+<!--                        <option>1</option>-->
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;PLOT&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-plot">Plot</label>-->
+<!--                    <textarea class="form-control" id="movie-plot" rows="3"></textarea>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;GENRE&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-genre">Genre</label>-->
+<!--                    <input type="text" class="form-control movie-genre" id="movie-genre" placeholder="Enter genre">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;DIRECTOR&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-director">Director</label>-->
+<!--                    <input type="text" class="form-control director" id="movie-director" placeholder="Enter director Name">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;CAST&ndash;&gt;-->
+<!--                <div class="form-group">-->
+<!--                    <label for="movie-actors">Actors</label>-->
+<!--                    <input type="text" class="form-control movie-actors" id="movie-actors" placeholder="Enter Cast Names">-->
+<!--                </div>-->
+<!--                <button id="add-movie-btn">Add Movie</button>-->
+<!--            </div>-->
+
+<!--        </form>-->
+
+<!--    </div>-->
+<!--    &lt;!&ndash;END FORM&ndash;&gt;-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;JQUERY CDN&ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<!--<script src="js/notes.js"></script>-->
+<!--&lt;!&ndash;BOOTSTRAP CDN&ndash;&gt;-->
+<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport"-->
+<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="css/notes.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">-->
+<!--    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Roboto&display=swap" rel="stylesheet">-->
+<!--    <title>Weather or Not</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--    <span class="heading">Weather Forecast</span>-->
+<!--    <span id="date"></span>-->
+<!--    <span id="time"></span>-->
+<!--</header>-->
+<!--<h3 id="city"> SAN ANTONIO, TX</h3>-->
+<!--<div id="threeDayForecast" class="row"></div>-->
+<!--<div id="mapContainer">-->
+<!--    <div id="map"></div>-->
+
+<!--</div>-->
+<!--<div id="searchContainer">-->
+<!--    <div id='geocoder' class='geocoder this' ></div>-->
+
+<!--</div>-->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.1/mapbox-gl.js'></script>-->
+<!--<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.1/mapbox-gl-geocoder.min.js'></script>-->
+<!--<script src="js/keys.js"></script>-->
+<!--<script src="js/mapbox-utils.js"></script>-->
+<!--<script src="js/notes.js"></script>-->
+<!--</body>-->
+<!--</html>-->

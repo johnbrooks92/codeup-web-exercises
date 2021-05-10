@@ -37,31 +37,31 @@
 
     // ============ Basic Example of Promise Creation and Handling
 
-    let goodKid = true;
+    // let goodKid = true;
 
     // a promise is made to do something
-    const getCake = new Promise((resolve, reject) => {
-        if (goodKid) {
-            resolve("Here is some cake");
-        } else {
-            reject("Bad. No cake. :(");
-        }
-    });
+    // const getCake = new Promise((resolve, reject) => {
+    //     if (goodKid) {
+    //         resolve("Here is some cake");
+    //     } else {
+    //         reject("Bad. No cake. :(");
+    //     }
+    // });
 
-    console.log(getCake); // promise object
+    // console.log(getCake); // promise object
 
     // once the promise is resolved or rejected, take additional action
 
-    getCake.then((data) => {
-        console.log(data);
-    }).catch((err) => {
-        console.log(err);
-    });
+    // getCake.then((data) => {
+    //     console.log(data);
+    // }).catch((err) => {
+    //     console.log(err);
+    // });
 
     // ============ Using Promises with jQuery version 3+
 
     // jQuery AJAX methods
-    //     $.ajax('https://swapi.co/api/people/1')
+    //     $.ajax('https://swapi.dev/api/people/1')
     //         .done(function(data) {
     //             console.log(data);
     //         })
@@ -70,7 +70,7 @@
     //         });
 
     // Using promise methods (jQuery version 3.x.x and after)
-    //     $.ajax('https://swapi.co/api/people/1')
+    //     $.ajax('https://swapi.dev/api/people/1')
     //         .then(function(data) {
     //             console.log(data);
     //         })
@@ -88,7 +88,7 @@
     // ============ Fetch API
 
     // jQuery AJAX request example
-    // $.ajax('https://swapi.co/api/people/1')
+    // $.ajax('https://swapi.dev/api/people/1')
     //     .done(function(data) {
     //         console.log(data);
     //     })
@@ -97,7 +97,7 @@
     //     });
 
     // Fetch API GET example
-    //     fetch('https://swapi.co/api/people/1')
+    //     fetch('https://swapi.dev/api/people/1')
     //         .then((response) => {
     //             return response.json();
     //         })
@@ -105,7 +105,13 @@
     //             console.log(data);
     //         })
     //         .catch(console.log);
-
+    //     // or
+    //
+    // //    another route
+    // fetch('https://swapi.dev/api/people/1')
+    //     .then(response=> response.json())
+    //     .then(console.log)
+    //     .catch(console.log)
     // Fetch API POST example
 
     // fetch('https://hookb.in/eKZ0mV6k1aTr9g86Q7JM', {
@@ -120,8 +126,8 @@
     // })
     //     .then(console.log)
     //     .catch(console.log);
-
-
+    //
+    //
 
 
 
@@ -271,7 +277,14 @@
     //
 
 
+var username = prompt("What is your user name?")
+    console.log(username);
 
+
+    fetch('https://api.github.com/users/' +username+ '/received_events/public', {headers: {'Authorization': githubSampleToken}})
+    .then(res => res.json())
+    .then(console.log)
+    .catch(console.error);
 
 </script>
 
