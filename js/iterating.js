@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    var names = ["john","caleb","tristen","andrew"]
+    var names = ["john", "caleb", "tristen", "andrew"]
     console.log(names);
 
 
@@ -23,16 +23,16 @@
      * accessing each element's index.
      */
     console.log(names[0]);
-	console.log(names[1]);
-	console.log(names[2]);
-	console.log(names[3]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
 
-    for(var i = 0; i < names.length; i++){
+    for (var i = 0; i < names.length; i++) {
         console.log(names[i]);
     }
 
@@ -41,7 +41,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function(name) {
+    names.forEach(function (name) {
         console.log(name);
     })
 
@@ -64,7 +64,7 @@
 
 
 
-    function returnFirstElement(x){
+    function returnFirstElement(x) {
         var firstValue = x[0]
         return [firstValue]
     }
@@ -72,10 +72,7 @@
     console.log(returnFirstElement(names));
 
 
-
-
-
-    function returnSecondElement(x){
+    function returnSecondElement(x) {
         var secondValue = x[1]
         return [secondValue]
     }
@@ -83,10 +80,7 @@
     console.log(returnSecondElement(names));
 
 
-
-
-
-    function returnLastElement(x){
+    function returnLastElement(x) {
         var lastValue = [x.length - 1]
         return [lastValue]
     }
