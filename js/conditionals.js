@@ -71,6 +71,12 @@ switch(colorChoice){
     case "brown":
         alert("That sounds bland.")
         break;
+    case "blue":
+        alert("That sounds better.")
+        break;
+    case "indigo":
+        alert("That sounds cool.")
+        break;
     default:
         alert("You're wrong, that isn't a good color.")
         break;

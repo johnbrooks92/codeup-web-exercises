@@ -86,5 +86,4 @@
     }
 
     console.log(names[returnLastElement(names)]);
-//
 })();

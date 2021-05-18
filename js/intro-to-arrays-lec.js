@@ -116,10 +116,10 @@ function returnLastElement(x) {
 }
 
 //
-// console.log(returnLastElement(daysOfTheWeek)); // returns integer value
-// console.log(returnLastElement(favoriteFoods)); // returns integer value
-// console.log(daysOfTheWeek[returnLastElement(daysOfTheWeek)]); // return last string in array
-// console.log(favoriteFoods[returnLastElement(favoriteFoods)]); // return last string in array
+console.log(returnLastElement(daysOfTheWeek)); // returns integer value
+console.log(returnLastElement(favoriteFoods)); // returns integer value
+console.log(daysOfTheWeek[returnLastElement(daysOfTheWeek)]); // return last string in array
+console.log(favoriteFoods[returnLastElement(favoriteFoods)]); // return last string in array
 //
 // /* ***************************************************************
 // * 					ITERATING ARRAYS

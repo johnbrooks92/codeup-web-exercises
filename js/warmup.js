@@ -11,5 +11,5 @@ function sayHello(name){
     // we will talk about returning later!
 }
 
-sayHello(name: "Connor");
-sayHello(name: "Amber");
+sayHello("Connor");
+sayHello("Amber");
